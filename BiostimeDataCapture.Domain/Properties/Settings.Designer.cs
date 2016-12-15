@@ -32,5 +32,16 @@ namespace BiostimeDataCapture.Domain.Properties {
                 return ((string)(this["BiostimeDataCaptureConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.0.183;Initial Catalog=BiostimeDataCapture;Persist Security In" +
+            "fo=True;User ID=sa")]
+        public string BiostimeDataCaptureConnectionString1 {
+            get {
+                return ((string)(this["BiostimeDataCaptureConnectionString1"]));
+            }
+        }
     }
 }

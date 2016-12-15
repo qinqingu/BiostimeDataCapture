@@ -303,6 +303,7 @@
     <Content Include="AppFrontend\Js\faArchive\fa.doc.list.js" />
     <Content Include="AppFrontend\Js\faArchive\fa.layout.js" />
     <Content Include="AppFrontend\Js\faArchive\fa.doc.mgmt.js" />
+    <Content Include="AppFrontend\Js\faArchive\fa.lenddoc.list.js" />
     <Content Include="AppFrontend\Js\webui-popup-box\confirmation.js" />
     <Content Include="AppFrontend\Js\webui-popup-box\prompt.js" />
     <Content Include="AppFrontend\Js\webui\webui.ajax.js" />
@@ -326,6 +327,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\FaArchiveLend\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -373,6 +375,7 @@
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Views\FaArchive\FaLendDocList.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -21,6 +21,8 @@ namespace BiostimeDataCapture
                             .Include("~/AppFrontend/Js/faArchive/fa.doc.list.js"));
             bundles.Add(new ScriptBundle("~/bundles/fadocmgmtjs")
                             .Include("~/AppFrontend/Js/faArchive/fa.doc.mgmt.js"));
+            bundles.Add(new ScriptBundle("~/bundles/falenddocjs")
+                            .Include("~/AppFrontend/Js/faArchive/fa.lenddoc.list.js"));
         }
 
         private static void RegisterLayoutBundles(BundleCollection bundles)

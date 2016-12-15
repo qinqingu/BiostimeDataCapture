@@ -1,5 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BiostimeDataCapture" Class="BiostimeDataCaptureDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=BiostimeDataCapture;Integrated Security=True" SettingsObjectName="BiostimeDataCapture.Domain.Properties.Settings" SettingsPropertyName="BiostimeDataCaptureConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.0.183;Initial Catalog=BiostimeDataCapture;Persist Security Info=True;User ID=sa" SettingsObjectName="BiostimeDataCapture.Domain.Properties.Settings" SettingsPropertyName="BiostimeDataCaptureConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.FaAchriveHistory" Member="FaAchriveHistories">
+    <Type Name="FaAchriveHistory">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AchriveId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Company" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Month" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VoucherWord" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="VoucherNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VoucherNo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="VoucherNos" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CabinetNo" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="FaArchive_FaAchriveHistory" Member="FaArchive" ThisKey="AchriveId" OtherKey="Id" Type="FaArchive" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProcessForm" Member="ProcessForms">
+    <Type Name="ProcessForm">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InstanceId" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessId" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="InitiatorId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InitiatorName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="InitiatorDept" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="ProcessForm_FaArchiveTranfer" Member="FaArchiveTranfers" ThisKey="Id" OtherKey="ProcessFormId" Type="FaArchiveTranfer" />
+    </Type>
+  </Table>
   <Table Name="dbo.FaArchive" Member="FaArchives">
     <Type Name="FaArchive">
       <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -10,12 +43,58 @@
       <Column Name="VoucherWord" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="VoucherNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="VoucherNo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="VoucherNos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VoucherNos" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="Path" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="CabinetNo" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="Remark" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="ModifiedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="FaArchive_FaAchriveHistory" Member="FaAchriveHistories" ThisKey="Id" OtherKey="AchriveId" Type="FaAchriveHistory" />
+      <Association Name="FaArchive_FaProcess" Member="FaProcesses" ThisKey="Id" OtherKey="ArchiveId" Type="FaProcess" />
+      <Association Name="FaArchive_Jieyue" Member="Jieyues" ThisKey="Id" OtherKey="ArchiveId" Type="Jieyue" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FaArchiveTranfer" Member="FaArchiveTranfers">
+    <Type Name="FaArchiveTranfer">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProcessFormId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ShenQingRenId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShenQingRenName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ShenQingRenBumenId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShenQingRenBumenName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ShenQingRiqi" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="JieyueYuanyin" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LiuchengZhuangtai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="FaArchiveTranfer_FaProcess" Member="FaProcesses" ThisKey="Id" OtherKey="TransferId" Type="FaProcess" />
+      <Association Name="ProcessForm_FaArchiveTranfer" Member="ProcessForm" ThisKey="ProcessFormId" OtherKey="Id" Type="ProcessForm" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FaProcess" Member="FaProcesses">
+    <Type Name="FaProcess">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TransferId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ArchiveId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Xuhao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="JieyueTianshu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="FaArchive_FaProcess" Member="FaArchive" ThisKey="ArchiveId" OtherKey="Id" Type="FaArchive" IsForeignKey="true" />
+      <Association Name="FaArchiveTranfer_FaProcess" Member="FaArchiveTranfer" ThisKey="TransferId" OtherKey="Id" Type="FaArchiveTranfer" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Jieyue" Member="Jieyues">
+    <Type Name="Jieyue">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TranferId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ArchiveId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="JieyueTianshu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="JieyueShijian" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="GuihuanShijian" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Jieyuezhuangtai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Guihuanzhuangtai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="FaArchive_Jieyue" Member="FaArchive" ThisKey="ArchiveId" OtherKey="Id" Type="FaArchive" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

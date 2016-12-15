@@ -33,6 +33,15 @@ namespace BiostimeDataCapture.Controllers
             return View("FaDocList");
         }
 
+        public ActionResult FaLendDocList()
+        {
+            if (!IsValidAccount())
+            {
+                return View("../Error/LoginError");
+            }
+            return View();
+        }
+
         [HttpGet]
         public ActionResult FaDocMgmt(long? id)
         {
@@ -140,5 +149,37 @@ namespace BiostimeDataCapture.Controllers
             }
         }
 
+        /// <summary>
+        ///     获取财务档案借阅列表(报表)
+        /// </summary>
+        /// <param name="rows">jqGrid每页行数</param>
+        /// <param name="page">jqGrid当前页</param>
+        /// <param name="query">查询条件(AdDocListParameter)</param>
+        /// <returns></returns>
+        [HttpGet]
+        public string GetFaLendDoc(int rows, int page, string query)
+        {
+            if (!IsValidAccount())
+            {
+                Redirect("../Error/LoginError");
+                return string.Empty;
+            }
+            int pageIndex = page;
+            int pageSize = rows;
+            var paging = new PagingParameter(pageIndex, pageSize);
+
+            long count;
+            var parameter = new FaDocListParameter();
+            if (!string.IsNullOrEmpty(query))
+            {
+                parameter = JsonHelper.Deserialize<FaDocListParameter>(query);
+            }
+            IList<FaDocDto> list = _faDocService.GetPageFaLendDocs(paging, parameter, out count);
+
+            var faDocJsonService = new FaDocJsonService();
+            string json = faDocJsonService.GetJqGridJson(list, count, paging);
+
+            return json;
+        }
     }
 }

@@ -1,12 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BiostimeDataCapture">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.375, 14.75" name="BiostimeDataCapture">
   <DataContextMoniker Name="/BiostimeDataCaptureDataContext" />
   <nestedChildShapes>
-    <classShape Id="c41d9fc4-b3e5-4c86-8be0-703163b4041e" absoluteBounds="4.375, 2.125, 2, 3.4817427571614581">
-      <DataClassMoniker Name="/BiostimeDataCaptureDataContext/FaArchive" />
+    <classShape Id="6344b520-c3b4-4da9-9589-b71bf4bc579c" absoluteBounds="8.625, 11, 2, 3.4817427571614559">
+      <DataClassMoniker Name="/BiostimeDataCaptureDataContext/FaAchriveHistory" />
       <nestedChildShapes>
-        <elementListCompartment Id="284ca7ee-0f11-4da1-85dc-7dec67f14304" absoluteBounds="4.39, 2.585, 1.9700000000000002, 2.921742757161458" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="6062b170-12b0-4780-86ff-4d19a39e9add" absoluteBounds="8.64, 11.46, 1.9700000000000002, 2.921742757161458" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="2a4f5f44-0592-4ccd-a010-43ee1adc912e" absoluteBounds="2.5, 9.5, 2, 2.5266442871093755">
+      <DataClassMoniker Name="/BiostimeDataCaptureDataContext/ProcessForm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f039d2e0-f949-4fe1-9da5-31f988511810" absoluteBounds="2.5150000000000006, 9.96, 1.9700000000000002, 1.966644287109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2fa1e803-7677-4ae2-a557-33a4cc6c3663" absoluteBounds="12.125, 6.375, 2, 3.4817427571614576">
+      <DataClassMoniker Name="/BiostimeDataCaptureDataContext/FaArchive" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a39b3c9-c113-489f-a973-f26560377172" absoluteBounds="12.14, 6.8350000000000009, 1.9700000000000002, 2.921742757161458" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="496003aa-aa90-4e6b-99a3-0086578aa94e" absoluteBounds="3, 4.625, 2, 2.5266442871093755">
+      <DataClassMoniker Name="/BiostimeDataCaptureDataContext/FaArchiveTranfer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b70c918a-54f0-406f-b6c2-8349d0b842ec" absoluteBounds="3.0150000000000006, 5.085, 1.9700000000000002, 1.966644287109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8404d52a-c2ef-4736-9c2f-d2be8b6125d9" absoluteBounds="8.625, 3.875, 2, 2.3356245930989581">
+      <DataClassMoniker Name="/BiostimeDataCaptureDataContext/FaProcess" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c91360a3-f9d2-4a9d-b19d-5eed47f4970a" absoluteBounds="8.64, 4.335, 1.9700000000000002, 1.7756245930989585" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.125 : 9.85674275716146); (13.125 : 12.7408713785807); (10.625 : 12.7408713785807)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BiostimeDataCaptureDataContext/FaArchive/FaArchive_FaAchriveHistory" />
+      <nodes>
+        <classShapeMoniker Id="2fa1e803-7677-4ae2-a557-33a4cc6c3663" />
+        <classShapeMoniker Id="6344b520-c3b4-4da9-9589-b71bf4bc579c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.75 : 9.5); (3.75 : 7.15164428710938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BiostimeDataCaptureDataContext/ProcessForm/ProcessForm_FaArchiveTranfer" />
+      <nodes>
+        <classShapeMoniker Id="2a4f5f44-0592-4ccd-a010-43ee1adc912e" />
+        <classShapeMoniker Id="496003aa-aa90-4e6b-99a3-0086578aa94e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.125 : 6.375); (13.125 : 5.04281229654948); (10.625 : 5.04281229654948)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BiostimeDataCaptureDataContext/FaArchive/FaArchive_FaProcess" />
+      <nodes>
+        <classShapeMoniker Id="2fa1e803-7677-4ae2-a557-33a4cc6c3663" />
+        <classShapeMoniker Id="8404d52a-c2ef-4736-9c2f-d2be8b6125d9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 5.41781229654948); (8.625 : 5.41781229654948)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BiostimeDataCaptureDataContext/FaArchiveTranfer/FaArchiveTranfer_FaProcess" />
+      <nodes>
+        <classShapeMoniker Id="496003aa-aa90-4e6b-99a3-0086578aa94e" />
+        <classShapeMoniker Id="8404d52a-c2ef-4736-9c2f-d2be8b6125d9" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c3e115ae-8020-4a22-bb69-515aedd8717b" absoluteBounds="8.125, 6.875, 2, 2.5266442871093751">
+      <DataClassMoniker Name="/BiostimeDataCaptureDataContext/Jieyue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d925182-c675-4af5-b589-08b310a51500" absoluteBounds="8.14, 7.3350000000000009, 1.9700000000000002, 1.966644287109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.125 : 8.13832214355469); (10.125 : 8.13832214355469)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BiostimeDataCaptureDataContext/FaArchive/FaArchive_Jieyue" />
+      <nodes>
+        <classShapeMoniker Id="2fa1e803-7677-4ae2-a557-33a4cc6c3663" />
+        <classShapeMoniker Id="c3e115ae-8020-4a22-bb69-515aedd8717b" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

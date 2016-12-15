@@ -45,7 +45,7 @@
         /// <summary>
         ///     本月总劵数
         /// </summary>
-        public int? VoucherNos { get; set; }
+        public string VoucherNos { get; set; }
 
         /// <summary>
         ///     存储位置
