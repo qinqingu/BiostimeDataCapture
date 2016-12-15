@@ -1,0 +1,70 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/AppFrontend/bower_components/jquery-ui/redmond/jquery-ui.custom.css" rel="stylesheet" />
+    <link href="~/AppFrontend/css/css.css" rel="stylesheet" />
+    <link href="~/AppFrontend/css/webui.css.css" rel="stylesheet" />
+     @Scripts.Render("~/bundles/jquery")
+     @Scripts.Render("~/bundles/webuijs")
+</head>
+    <body>
+        <form id="mainForm">
+            <div id="errorContainer" class="error">
+            </div>
+            <div id="messageContainer" style="display: none"> </div>
+            <div class="top-wrap">
+                <div class="top">
+                    <div class="width clearfix">
+                        <div class="amberlogo">
+                            EDOC2
+                        </div>
+                        <div class="title beleft dfKai-sb" style="font-size: 20px; padding-left: 40px;">
+                            合生元财务档案数据采集
+                        </div>
+                        <ul id="topTabs">
+                            <li>
+                                <a href="#" class="on">
+                                    <span>我的帐号</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page_title">
+                    <div class="width dfKai-sb">
+                        <h2>@RenderSection("subTitle")</h2>
+                        <ul class="user">
+                            <li style="font-size: 16px;">欢迎回来,
+                                <label id="userRealName">admin</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main_wrap width clearfix" style="padding-bottom: 0; padding-top: 98px;">
+                <div class="quick_menu width">
+                    <div class="box">
+                        @RenderSection("quickmenubox")
+                    </div>
+                </div>
+                <div class="list_wrap bg_color_f">
+                    <div class="content_container">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+            <div class="footer margin_t_5" style="margin-top: 0; padding-top: 0; top: 2px">
+                <div class="width">
+                    <span>
+                        <label id="nowYear"></label> Anna.Gu All Rights Reserved.
+                    </span>
+                    <a href="#">Back to Top</a>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

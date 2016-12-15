@@ -1,0 +1,89 @@
+﻿/*for overwrite*/
+.top .amberlogo {
+    color: #fff;
+    float: left;
+    font-family: cursive;
+    font-size: 36px;
+    margin-top: -5px;
+    width: 200px;
+}
+
+.dfKai-sb { font-family: DFKai-SB; }
+
+.valigntop { vertical-align: top; }
+
+/*for width*/
+
+.width {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 1100px !important;
+}
+
+.margin_left_right {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.width90 { width: 90% }
+
+.width100 { width: 100% }
+
+/*footer*/
+
+.footer {
+    border-top: 1px solid #959595;
+    color: #999999;
+    height: auto !important;
+    height: 30px;
+    margin: 0px auto;
+    min-height: 30px;
+    padding: 10px 0px;
+    position: relative;
+    width: 1100px;
+}
+
+/*Float*/
+
+.left { float: left; }
+
+.right { float: right; }
+
+/*Error*/
+
+.error {
+    background-color: #fad5cf;
+    background-image: url(../images/cross_circle.png);
+    background-position: 10px 5px;
+    background-repeat: no-repeat;
+    border: 1px solid #e38b81;
+    clear: both;
+    color: #504d4f;
+    display: none;
+    height: auto !important;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    text-indent: 2em;
+}
+
+.error {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input.highlight, textarea.highlight, select.highlight {
+    border-color: red;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+label.highlight { color: red }
+
+td.highlight { background-color: #fad5cf; }
+
+.button01 { cursor: pointer }
+
+.button02 { cursor: pointer }
+
+.cursorpointer { cursor: pointer }

@@ -1,0 +1,5 @@
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Dto\bin\Debug\BiostimeDataCapture.Dto.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Dto\bin\Debug\BiostimeDataCapture.Dto.pdb
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Dto\obj\Debug\BiostimeDataCapture.Dto.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Dto\obj\Debug\BiostimeDataCapture.Dto.pdb
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Dto\obj\Debug\BiostimeDataCapture.Dto.csprojResolveAssemblyReference.cache

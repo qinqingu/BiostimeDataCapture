@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9EE609F2-87FF-48CD-9543-5DC417FE4831}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BiostimeDataCapture</RootNamespace>
+    <AssemblyName>BiostimeDataCapture</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EDoc2.ApiClient">
+      <HintPath>..\packages\Edoc2\EDoc2.ApiClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.4.3.11\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ControllerBase.cs" />
+    <Compile Include="Controllers\FaArchiveController.cs" />
+    <Compile Include="Controllers\GeneralController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\JsonJqGrids\JsonJqGridObject.cs" />
+    <Compile Include="Models\JsonJqGrids\JsonJqGridRowObject.cs" />
+    <Compile Include="Models\Jsons\AbstractJsonService.cs" />
+    <Compile Include="Models\Jsons\FaDocJsonService.cs" />
+    <Compile Include="Models\Jsons\JsonHelper.cs" />
+    <Compile Include="Models\Utility\HtmlHelper.cs" />
+    <Compile Include="Models\Utility\LogHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppFrontend\bower_components\jquery-fileupload\jquery.fileupload.js" />
+    <Content Include="AppFrontend\bower_components\jquery-fileupload\jquery.iframe-transport.js" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\jquery.jqgrid\grid.locale-cn.js" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\jquery.jqgrid\jquery.jqgrid.js" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\jquery.jqgrid\ui.jqgrid.css" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\box.bg.normal.jpg" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\jquery-ui-1.9.2.custom.css" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\jquery-ui.custom.css" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\jquery-ui.custom.js" />
+    <Content Include="AppFrontend\bower_components\jquery\jquery.custom.js" />
+    <Content Include="AppFrontend\bower_components\jquery\jquery.js" />
+    <Content Include="AppFrontend\bower_components\jquery\jquery.numeric.js" />
+    <Content Include="AppFrontend\bower_components\jquery\jquery.validate.custom.js" />
+    <Content Include="AppFrontend\bower_components\jquery\jquery.validate.js" />
+    <Content Include="AppFrontend\css\webui.css.css" />
+    <Content Include="AppFrontend\css\css.css" />
+    <Content Include="AppFrontend\images\addnew.png" />
+    <Content Include="AppFrontend\images\asc.gif" />
+    <Content Include="AppFrontend\images\bg.jpg" />
+    <Content Include="AppFrontend\images\bg_fade_med.png" />
+    <Content Include="AppFrontend\images\bg_heading.png" />
+    <Content Include="AppFrontend\images\bg_x.png" />
+    <Content Include="AppFrontend\images\blank.gif" />
+    <Content Include="AppFrontend\images\body.bg.jpg" />
+    <Content Include="AppFrontend\images\box.bg.jpg" />
+    <Content Include="AppFrontend\images\box.bg.normal.jpg" />
+    <Content Include="AppFrontend\images\box.li.line.jpg" />
+    <Content Include="AppFrontend\images\btn.l.png" />
+    <Content Include="AppFrontend\images\btn.r.png" />
+    <Content Include="AppFrontend\images\btnGray.l.png" />
+    <Content Include="AppFrontend\images\btnGray.lon.png" />
+    <Content Include="AppFrontend\images\btnGray.m.png" />
+    <Content Include="AppFrontend\images\btnGray.mon.png" />
+    <Content Include="AppFrontend\images\btnGray.r.png" />
+    <Content Include="AppFrontend\images\btnGray.ron.png" />
+    <Content Include="AppFrontend\images\button01.l.png" />
+    <Content Include="AppFrontend\images\button01.lon.png" />
+    <Content Include="AppFrontend\images\button01.m.png" />
+    <Content Include="AppFrontend\images\button01.mon.png" />
+    <Content Include="AppFrontend\images\button01.r.png" />
+    <Content Include="AppFrontend\images\button01.ron.png" />
+    <Content Include="AppFrontend\images\button02.l.png" />
+    <Content Include="AppFrontend\images\button02.lon.png" />
+    <Content Include="AppFrontend\images\button02.m.png" />
+    <Content Include="AppFrontend\images\button02.mon.png" />
+    <Content Include="AppFrontend\images\button02.r.png" />
+    <Content Include="AppFrontend\images\button02.ron.png" />
+    <Content Include="AppFrontend\images\ChartImg.png" />
+    <Content Include="AppFrontend\images\ChartImg1.png" />
+    <Content Include="AppFrontend\images\column_bg.jpg" />
+    <Content Include="AppFrontend\images\conbg.down150.cb.jpg" />
+    <Content Include="AppFrontend\images\conbg.down150.jpg" />
+    <Content Include="AppFrontend\images\conbg.down50.cb.jpg" />
+    <Content Include="AppFrontend\images\conbg.down50.jpg" />
+    <Content Include="AppFrontend\images\conbg.up150.jpg" />
+    <Content Include="AppFrontend\images\cross_circle.png" />
+    <Content Include="AppFrontend\images\Delete.png" />
+    <Content Include="AppFrontend\images\desc.gif" />
+    <Content Include="AppFrontend\images\down.gif" />
+    <Content Include="AppFrontend\images\down.png" />
+    <Content Include="AppFrontend\images\exclamation.png" />
+    <Content Include="AppFrontend\images\flip.bg.jpg" />
+    <Content Include="AppFrontend\images\footer.l.jpg" />
+    <Content Include="AppFrontend\images\footer.r.jpg" />
+    <Content Include="AppFrontend\images\icon.help.png" />
+    <Content Include="AppFrontend\images\icon.name.jpg" />
+    <Content Include="AppFrontend\images\icon.password.jpg" />
+    <Content Include="AppFrontend\images\ico_action_plan.png" />
+    <Content Include="AppFrontend\images\ico_dashboard.png" />
+    <Content Include="AppFrontend\images\ico_logout.png" />
+    <Content Include="AppFrontend\images\ico_my_account.png" />
+    <Content Include="AppFrontend\images\ico_others.png" />
+    <Content Include="AppFrontend\images\index.bg.jpg" />
+    <Content Include="AppFrontend\images\information.png" />
+    <Content Include="AppFrontend\images\iVASLogo.jpg" />
+    <Content Include="AppFrontend\images\last.gif" />
+    <Content Include="AppFrontend\images\leftmenu.b.jpg" />
+    <Content Include="AppFrontend\images\leftmenu.t.jpg" />
+    <Content Include="AppFrontend\images\li.title.highlight.l.jpg" />
+    <Content Include="AppFrontend\images\li.title.highlight.m.jpg" />
+    <Content Include="AppFrontend\images\li.title.highlight.r.jpg" />
+    <Content Include="AppFrontend\images\li.title.normal.l.jpg" />
+    <Content Include="AppFrontend\images\li.title.normal.m.jpg" />
+    <Content Include="AppFrontend\images\li.title.normal.r.jpg" />
+    <Content Include="AppFrontend\images\login.b.png" />
+    <Content Include="AppFrontend\images\login.body.bg.jpg" />
+    <Content Include="AppFrontend\images\login.dy.png" />
+    <Content Include="AppFrontend\images\login.m.png" />
+    <Content Include="AppFrontend\images\login.t.png" />
+    <Content Include="AppFrontend\images\logo.png" />
+    <Content Include="AppFrontend\images\loss_title_bg.jpg" />
+    <Content Include="AppFrontend\images\main.b.jpg" />
+    <Content Include="AppFrontend\images\main.m.jpg" />
+    <Content Include="AppFrontend\images\main.t.5.s1.jpg" />
+    <Content Include="AppFrontend\images\movedown.png" />
+    <Content Include="AppFrontend\images\moveup.png" />
+    <Content Include="AppFrontend\images\move_child.png" />
+    <Content Include="AppFrontend\images\move_parent.png" />
+    <Content Include="AppFrontend\images\nav.bg.jpg" />
+    <Content Include="AppFrontend\images\nav.l.jpg" />
+    <Content Include="AppFrontend\images\nav.m.jpg" />
+    <Content Include="AppFrontend\images\nav.r.jpg" />
+    <Content Include="AppFrontend\images\next.gif" />
+    <Content Include="AppFrontend\images\pre.gif" />
+    <Content Include="AppFrontend\images\quick_menu.bg.jpg" />
+    <Content Include="AppFrontend\images\quick_menu_arrow.png" />
+    <Content Include="AppFrontend\images\quick_menu_bg.png" />
+    <Content Include="AppFrontend\images\refresh.jpg" />
+    <Content Include="AppFrontend\images\search.box.jpg" />
+    <Content Include="AppFrontend\images\search.go.png" />
+    <Content Include="AppFrontend\images\star.png" />
+    <Content Include="AppFrontend\images\step_l.png" />
+    <Content Include="AppFrontend\images\step_l_on.png" />
+    <Content Include="AppFrontend\images\step_m.png" />
+    <Content Include="AppFrontend\images\step_r.png" />
+    <Content Include="AppFrontend\images\step_r_on.png" />
+    <Content Include="AppFrontend\images\subnav.l.jpg" />
+    <Content Include="AppFrontend\images\subnav.m.jpg" />
+    <Content Include="AppFrontend\images\subnav.r.jpg" />
+    <Content Include="AppFrontend\images\tabs.co.bg.jpg" />
+    <Content Include="AppFrontend\images\tabs.co.on.bg.jpg" />
+    <Content Include="AppFrontend\images\terago.logo.jpg" />
+    <Content Include="AppFrontend\images\text_input.bg.jpg" />
+    <Content Include="AppFrontend\images\tick_circle.png" />
+    <Content Include="AppFrontend\images\title_bg.jpg" />
+    <Content Include="AppFrontend\images\toggleDown.png" />
+    <Content Include="AppFrontend\images\toggleUp.png" />
+    <Content Include="AppFrontend\images\top.arrow.png" />
+    <Content Include="AppFrontend\images\top.bg.jpg" />
+    <Content Include="AppFrontend\images\top.bg.png" />
+    <Content Include="AppFrontend\images\top.gif" />
+    <Content Include="AppFrontend\images\top.hover.bg.jpg" />
+    <Content Include="AppFrontend\images\up.gif" />
+    <Content Include="AppFrontend\images\up.png" />
+    <Content Include="AppFrontend\images\wait.gif" />
+    <Content Include="AppFrontend\images\warning.png" />
+    <Content Include="AppFrontend\images\wrap_bg.png" />
+    <Content Include="AppFrontend\Js\faArchive\fa.doc.list.js" />
+    <Content Include="AppFrontend\Js\faArchive\fa.layout.js" />
+    <Content Include="AppFrontend\Js\faArchive\fa.doc.mgmt.js" />
+    <Content Include="AppFrontend\Js\webui-popup-box\confirmation.js" />
+    <Content Include="AppFrontend\Js\webui-popup-box\prompt.js" />
+    <Content Include="AppFrontend\Js\webui\webui.ajax.js" />
+    <Content Include="AppFrontend\Js\webui\webui.grid.js" />
+    <Content Include="AppFrontend\Js\webui\webui.js" />
+    <Content Include="AppFrontend\Js\webui\webui.masterpage.js" />
+    <Content Include="AppFrontend\Js\webui\webui.validator.js" />
+    <Content Include="Default.htm" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppFrontend\images\quick_menu.bg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\FaArchive\_faArchiveLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\FaArchive\FaDocList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BiostimeDataCapture.AppService\BiostimeDataCapture.AppService.csproj">
+      <Project>{f37e8dd4-e6d4-46cb-83b1-85b1e5c3f567}</Project>
+      <Name>BiostimeDataCapture.AppService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BiostimeDataCapture.Common\BiostimeDataCapture.Common.csproj">
+      <Project>{5dbe3086-f5d5-44ef-945b-880e910675d0}</Project>
+      <Name>BiostimeDataCapture.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BiostimeDataCapture.Domain\BiostimeDataCapture.Domain.csproj">
+      <Project>{b5a61ef3-28e3-43eb-a902-a2831e3a178d}</Project>
+      <Name>BiostimeDataCapture.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BiostimeDataCapture.Dto\BiostimeDataCapture.Dto.csproj">
+      <Project>{510b134c-adad-40d9-a4fc-291809c93d48}</Project>
+      <Name>BiostimeDataCapture.Dto</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\FaArchive\FaDocMgmt.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Error\LoginError.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Error\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4023/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

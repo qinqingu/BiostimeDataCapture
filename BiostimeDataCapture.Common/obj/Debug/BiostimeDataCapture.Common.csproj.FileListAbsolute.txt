@@ -1,0 +1,6 @@
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Common\bin\Debug\BiostimeDataCapture.Common.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Common\bin\Debug\BiostimeDataCapture.Common.pdb
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Common\obj\Debug\BiostimeDataCapture.Common.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Common\obj\Debug\BiostimeDataCapture.Common.pdb
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Common\bin\Debug\EDoc2.ApiClient.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Common\obj\Debug\BiostimeDataCapture.Common.csprojResolveAssemblyReference.cache

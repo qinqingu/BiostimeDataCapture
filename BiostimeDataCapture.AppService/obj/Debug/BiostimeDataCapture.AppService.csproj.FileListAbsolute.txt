@@ -1,0 +1,14 @@
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\bin\Debug\BiostimeDataCapture.AppService.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\bin\Debug\BiostimeDataCapture.AppService.pdb
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\obj\Debug\BiostimeDataCapture.AppService.csprojResolveAssemblyReference.cache
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\obj\Debug\BiostimeDataCapture.AppService.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\obj\Debug\BiostimeDataCapture.AppService.pdb
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\bin\Debug\BiostimeDataCapture.DataService.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\bin\Debug\BiostimeDataCapture.Domain.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\bin\Debug\BiostimeDataCapture.Dto.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\bin\Debug\BiostimeDataCapture.Common.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\bin\Debug\EDoc2.ApiClient.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\bin\Debug\BiostimeDataCapture.DataService.pdb
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\bin\Debug\BiostimeDataCapture.Domain.pdb
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\bin\Debug\BiostimeDataCapture.Dto.pdb
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\bin\Debug\BiostimeDataCapture.Common.pdb

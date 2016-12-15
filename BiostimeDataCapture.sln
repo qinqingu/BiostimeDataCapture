@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiostimeDataCapture", "BiostimeDataCapture\BiostimeDataCapture.csproj", "{9EE609F2-87FF-48CD-9543-5DC417FE4831}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiostimeDataCapture.AppService", "BiostimeDataCapture.AppService\BiostimeDataCapture.AppService.csproj", "{F37E8DD4-E6D4-46CB-83B1-85B1E5C3F567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiostimeDataCapture.Common", "BiostimeDataCapture.Common\BiostimeDataCapture.Common.csproj", "{5DBE3086-F5D5-44EF-945B-880E910675D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiostimeDataCapture.DataService", "BiostimeDataCapture.DataService\BiostimeDataCapture.DataService.csproj", "{9E206991-4B4D-4E94-9FCB-484793457397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiostimeDataCapture.Domain", "BiostimeDataCapture.Domain\BiostimeDataCapture.Domain.csproj", "{B5A61EF3-28E3-43EB-A902-A2831E3A178D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiostimeDataCapture.Dto", "BiostimeDataCapture.Dto\BiostimeDataCapture.Dto.csproj", "{510B134C-ADAD-40D9-A4FC-291809C93D48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EE609F2-87FF-48CD-9543-5DC417FE4831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE609F2-87FF-48CD-9543-5DC417FE4831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE609F2-87FF-48CD-9543-5DC417FE4831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE609F2-87FF-48CD-9543-5DC417FE4831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F37E8DD4-E6D4-46CB-83B1-85B1E5C3F567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F37E8DD4-E6D4-46CB-83B1-85B1E5C3F567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F37E8DD4-E6D4-46CB-83B1-85B1E5C3F567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F37E8DD4-E6D4-46CB-83B1-85B1E5C3F567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DBE3086-F5D5-44EF-945B-880E910675D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DBE3086-F5D5-44EF-945B-880E910675D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DBE3086-F5D5-44EF-945B-880E910675D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DBE3086-F5D5-44EF-945B-880E910675D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E206991-4B4D-4E94-9FCB-484793457397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E206991-4B4D-4E94-9FCB-484793457397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E206991-4B4D-4E94-9FCB-484793457397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E206991-4B4D-4E94-9FCB-484793457397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5A61EF3-28E3-43EB-A902-A2831E3A178D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5A61EF3-28E3-43EB-A902-A2831E3A178D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5A61EF3-28E3-43EB-A902-A2831E3A178D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5A61EF3-28E3-43EB-A902-A2831E3A178D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{510B134C-ADAD-40D9-A4FC-291809C93D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{510B134C-ADAD-40D9-A4FC-291809C93D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{510B134C-ADAD-40D9-A4FC-291809C93D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{510B134C-ADAD-40D9-A4FC-291809C93D48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

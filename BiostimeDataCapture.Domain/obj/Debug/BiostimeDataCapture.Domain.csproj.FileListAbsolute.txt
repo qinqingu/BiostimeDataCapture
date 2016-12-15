@@ -1,0 +1,5 @@
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Domain\bin\Debug\BiostimeDataCapture.Domain.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Domain\bin\Debug\BiostimeDataCapture.Domain.pdb
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Domain\obj\Debug\BiostimeDataCapture.Domain.dll
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Domain\obj\Debug\BiostimeDataCapture.Domain.pdb
+E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Domain\bin\Debug\BiostimeDataCapture.Domain.dll.config
