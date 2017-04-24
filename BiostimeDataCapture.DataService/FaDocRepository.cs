@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using BiostimeDataCapture.DataService._RepositoryCore;
 using BiostimeDataCapture.Domain;
+using BiostimeDataCapture.Domain.Enum;
 using BiostimeDataCapture.Dto;
 using BiostimeDataCapture.Dto._Common;
 
@@ -17,8 +18,15 @@ namespace BiostimeDataCapture.DataService
             return DataContext.FaArchives.Single(t => t.Id == id);
         }
 
+        public IList<FaDocDto> Find(FaArchiveListParameter parameter)
+        {
+            IQueryable<FaArchive> queryable = FindFdDocs(parameter);
+            IList<FaArchive> faDocs = queryable.ToList();
+            return GetFaDocDtos(faDocs);
+        }
+
         public IList<FaDocDto> Find(
-           PagingParameter paging, FaDocListParameter parameter, out long count)
+           PagingParameter paging, FaArchiveListParameter parameter, out long count)
         {
             IQueryable<FaArchive> queryable = FindFdDocs(parameter);
 
@@ -35,7 +43,7 @@ namespace BiostimeDataCapture.DataService
             return GetFaDocDtos(faDocs);
         }
 
-        private IQueryable<FaArchive> FindFdDocs(FaDocListParameter parameter)
+        private IQueryable<FaArchive> FindFdDocs(FaArchiveListParameter parameter)
         {
             IQueryable<FaArchive> queryable = !string.IsNullOrEmpty(parameter.Query)
                                               ? DataContext.FaArchives.Where(GetPredicate(parameter.Query))
@@ -48,13 +56,21 @@ namespace BiostimeDataCapture.DataService
             {
                 queryable = queryable.Where(t => t.Company.Contains(parameter.Company));
             }
-            if (parameter.Year != null)
+            if (parameter.YearBegin != null)
             {
-                queryable = queryable.Where(t => t.Year == parameter.Year);
+                queryable = queryable.Where(t => t.Year >= parameter.YearBegin);
             }
-            if (parameter.Month != null)
+            if (parameter.YearEnd != null)
             {
-                queryable = queryable.Where(t => t.Month == parameter.Month);
+                queryable = queryable.Where(t => t.Year <= parameter.YearEnd);
+            }
+            if (parameter.MonthBegin != null)
+            {
+                queryable = queryable.Where(t => t.Month >= parameter.MonthBegin);
+            }
+            if (parameter.MonthEnd != null)
+            {
+                queryable = queryable.Where(t => t.Month <= parameter.MonthEnd);
             }
             if (!string.IsNullOrEmpty(parameter.VoucherWord))
             {
@@ -71,6 +87,14 @@ namespace BiostimeDataCapture.DataService
             if (parameter.VoucherNos != null)
             {
                 queryable = queryable.Where(t => t.VoucherNos == parameter.VoucherNos);
+            }
+            if (!string.IsNullOrEmpty(parameter.BaogaoMingcheng))
+            {
+                queryable = queryable.Where(t => t.BaogaoMingcheng.Contains(parameter.BaogaoMingcheng));
+            }
+            if (!string.IsNullOrEmpty(parameter.Hetonghao))
+            {
+                queryable = queryable.Where(t => t.HetongHao.Contains(parameter.Hetonghao));
             }
             if (!string.IsNullOrEmpty(parameter.Path))
             {
@@ -107,8 +131,11 @@ namespace BiostimeDataCapture.DataService
                 VoucherNumber = faArchive.VoucherNumber,
                 VoucherNo = faArchive.VoucherNo,
                 VoucherNos = faArchive.VoucherNos,
+                BaogaoMingcheng = faArchive.BaogaoMingcheng,
+                Hetonghao = faArchive.HetongHao,
                 Path = faArchive.Path,
-                CabinetNo = faArchive.CabinetNo
+                CabinetNo = faArchive.CabinetNo,
+                Beizhu =faArchive.Beizhu
             };
             return item;
         }
@@ -122,6 +149,30 @@ namespace BiostimeDataCapture.DataService
                         || t.CabinetNo.Contains(query);
         }
 
+        public IList<FaContent> FindContents()
+        {
+            return DataContext.FaContents.ToList().Select(faContent => new FaContent
+            {
+                Id = faContent.Id,
+                Name = faContent.Name,
+                Value = faContent.Value
+            }).ToList();
+        }
+
+        public IList<FaCompany> FindAllCompanys()
+        {
+            return DataContext.FaCompanies.ToList();
+        }
+
+        public IList<FaCompany> FindEffectiveCompanys()
+        {
+            return DataContext.FaCompanies.Where(t=>t.Enable==true).Select(faCompany => new FaCompany
+            {
+                Id = faCompany.Id,
+                Name = faCompany.Name
+            }).ToList();
+        }
+
         public void Save(FaArchive entity)
         {
             entity.ModifiedTime = DateTime.Now;
@@ -132,5 +183,6 @@ namespace BiostimeDataCapture.DataService
             }
             DataContext.SubmitChanges();
         }
+
     }
 }

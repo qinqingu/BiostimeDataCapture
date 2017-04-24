@@ -1,0 +1,21 @@
+﻿@using System.Web.Optimization
+@{
+    ViewBag.Title = "财务档案信息报表";
+    Layout = "../Shared/_Layout.cshtml";
+}
+@Scripts.Render("~/bundles/falayoutjs")
+@section subTitle{
+    合生元财务档案数据管理
+}
+@section quickmenubox{
+    <ul>
+        <li><a href="#"></a></li>
+        <li><a href="../FaArchive/Index" id="docFaInfoTab">财务档案信息管理</a></li>
+        <li><a href="../FaArchiveLend/FaLendDocList" id="docFaLendingInfoTab">财务档案借阅管理</a></li>
+        <li><a href="../FaArchiveReturn/FaReturnDocList" id="docFaReturnInfoTab">财务档案归还管理</a></li>
+        <li><a href="../FaCabinetNo/FaCabinetNoList" id="docCabinetNoInfoTab">柜号信息管理</a></li>
+        <li><a href="../FaCompany/FaCompanyList" id="docCompanyInfoTab">公司名称管理</a></li>
+        <li><a href="../FaReportName/FaReportNameList" id="docReportNameInfoTab">报告名称管理</a></li>
+    </ul>
+}
+@RenderBody()

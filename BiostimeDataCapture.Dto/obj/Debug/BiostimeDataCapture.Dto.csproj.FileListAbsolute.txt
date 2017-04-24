@@ -2,4 +2,7 @@ E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Dto\bin\Debug\BiostimeDa
 E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Dto\bin\Debug\BiostimeDataCapture.Dto.pdb
 E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Dto\obj\Debug\BiostimeDataCapture.Dto.dll
 E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Dto\obj\Debug\BiostimeDataCapture.Dto.pdb
-E:\项目开发\BiostimeDataCapture\BiostimeDataCapture.Dto\obj\Debug\BiostimeDataCapture.Dto.csprojResolveAssemblyReference.cache
+E:\项目开发\BiostimeDataCapture_201704152146.bak\BiostimeDataCapture_201704152146.bak\BiostimeDataCapture.Dto\bin\Debug\BiostimeDataCapture.Dto.dll
+E:\项目开发\BiostimeDataCapture_201704152146.bak\BiostimeDataCapture_201704152146.bak\BiostimeDataCapture.Dto\bin\Debug\BiostimeDataCapture.Dto.pdb
+E:\项目开发\BiostimeDataCapture_201704152146.bak\BiostimeDataCapture_201704152146.bak\BiostimeDataCapture.Dto\obj\Debug\BiostimeDataCapture.Dto.dll
+E:\项目开发\BiostimeDataCapture_201704152146.bak\BiostimeDataCapture_201704152146.bak\BiostimeDataCapture.Dto\obj\Debug\BiostimeDataCapture.Dto.pdb

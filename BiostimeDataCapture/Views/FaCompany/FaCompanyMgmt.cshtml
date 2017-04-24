@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "公司名称管理";
+    Layout = "../Shared/Navigation.cshtml";
+}
+@Scripts.Render("~/bundles/facompanymgmtjs")
+<div id="adCompanyMgmtErrorContainer" class="error" ></div>
+<div class="headings">
+    部门信息
+</div>
+<div class="content_box box_content">
+    <table style="width: 100%;">
+        <tr class="border_b_1_da">
+            <td>
+                状态:
+            </td>
+            <td>
+                <input type="hidden" id="companyState" name="companyState" value="@ViewData["enable"]"/>
+                <select  id="companyStates" style="width: 192px;">
+                    <option selected="selected" value="true">启用</option>
+                    <option value="false">禁用</option>
+                </select>
+            </td>
+            <td style="width: 80px;">
+                公司名称:
+            </td>
+            <td style="width: 280px;">
+                <input type="hidden" id="companyNameDisabled" name="companyNameDisabled" value="@ViewData["companyNameDisabled"]"/>
+                <input type="hidden" id="companyId" name="companyId" value="@ViewData["companyId"]"/>
+                <input type="text" id="companyName" name="companyName" value="@ViewData["companyName"]" class="text_input" disabled="disabled"  maxlength="100" />
+            </td>
+            <td style="width: 80px;">
+                备注:
+            </td>
+            <td>
+                <input type="text"  id="remark" name="remark" value="@ViewData["remark"]" class="text_input" />
+            </td>
+        </tr>
+    </table>
+    <div class="margin-t10">
+        <div class="left" style="width: 400px;">&nbsp;&nbsp;</div>
+        <div>
+            <a id="saveButton" class="button01">
+                <span class="l"></span>
+                <span class="m">保存</span>
+                <span class="r"></span>
+            </a>
+            <a id="saveAndContinueButton" class="button01">
+                <span class="l"></span>
+                <span class="m">保存并继续</span>
+                <span class="r"></span>
+            </a>
+            <a id="returnButton" class="button01" href="FaCompanyList">
+                <span class="l"></span>
+                <span class="m">返回</span>
+                <span class="r"></span>
+            </a>
+        </div>
+    </div>
+</div>

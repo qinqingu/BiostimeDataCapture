@@ -1,0 +1,167 @@
+﻿@{
+    ViewBag.Title = "财务档案归还信息操作";
+    Layout = "../Shared/Navigation.cshtml";
+}
+@Styles.Render("~/bundles/gridcss")
+@Scripts.Render("~/bundles/gridjs")
+@Scripts.Render("~/bundles/fareturndocjs")
+<div id="faReturnDocListErrorContainer" class="error" ></div>
+<div class="box">
+    <div class="search beleft margin_l_10">
+        <div class="search_box" title="支持存储内容、凭证字、凭证券号、存储位置、存储柜号模糊查询.">
+            <input type="text" id="searchText" style="width: 200px;" placeholder="存储内容、凭证字、凭证券号、存储位置、存储柜号"/>				
+        </div>
+        <span class="margin_r_10">财务档案信息</span>
+    </div>
+    <div class="tab_button">
+        <div class="search beleft margin_l_10">
+            <span class="margin_r_10">存储内容选择</span>
+        </div>
+         <input type="hidden" id="contentItems" name="contentItems" value="@ViewData["contentsDto"]"/>
+        <select  id="content" style="width: 100px;" title="存储内容选择">
+        </select>
+    </div>
+    <div class="tab_button">
+        <a id="searchButton" class="button02">
+            <span class="l"></span>
+            <span class="m">搜索</span>
+            <span class="r"></span>
+        </a>
+        <a id="showMoreQueryButton" class="button02">
+            <span class="l"></span>
+            <span class="m">高级搜索</span>
+            <span class="r"></span>
+        </a>
+    </div>
+</div>
+
+<div class="content_container clearfix">
+    <table style="width: 100%;display: none"  id="moreQueryContainer">
+        <tr class="border_b_1_da">
+            <td style="width: 80px;">
+                公司:
+            </td>
+            <td style="width: 280px;">
+                @*<input type="hidden" id="companyItems" name="companyItems" value="@ViewData["companyDto"]"/>
+                <select  id="company" style="width: 192px;">
+                </select>*@
+                <input name='company' id='company' type='text' class='webui-textbox' data-suggestions="@this.Url.Action("CompanyNames", "Script")"/>
+            </td>
+            <td style="width: 100px;">
+                年份(开始):
+            </td>
+            <td style="width: 280px;">
+                <input type="text" id="yearBegin" name="year" class="text_input" />
+            </td>
+            <td style="width: 100px;">
+                年份(结束):
+            </td>
+            <td style="width: 280px;">
+                <input type="text" id="yearEnd" name="year" class="text_input" />
+            </td>
+        </tr>
+        <tr class="border_b_1_da">
+            @*<td style="width: 100px;">
+                存储位置:
+            </td>
+            <td>
+                <input type="text" id="path" name="path" class="text_input" />
+            </td>
+            <td style="width: 100px;">
+                存储柜号:
+            </td>
+            <td>
+                <input type="text" id="cabinetNo" name="cabinetNo" class="text_input" />
+            </td> *@
+            <td style="width: 100px;">
+                借阅时间(开始):
+            </td>
+            <td>
+                <input type="text" id="jieyueShijianBegin" name="jieyueShijianBegin" class="text_input" />
+            </td>
+            <td style="width: 100px;">
+                借阅时间(结束):
+            </td>
+            <td>
+                <input type="text" id="jieyueShijianEnd" name="jieyueShijianEnd" class="text_input" />
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table style="width: 100%;display: none" id="faEgQueryContainer"> 
+        <tr class="border_b_1_da">
+            <td style="width: 84px;">
+                凭证字:
+            </td>
+            <td style="width: 280px;">
+                <input type="text" id="voucherWord" name="voucherWord" class="text_input" />
+            </td>
+            <td style="width: 68px;">
+                凭证号:
+            </td>
+            <td style="width: 280px;">
+                <input type="text" id="voucherNumber" name="voucherNumber" class="text_input" />
+            </td>
+            <td style="width: 68px;">
+                凭证券号:
+            </td>
+            <td>
+                <input type="text" id="voucherNo" name="voucherNo" class="text_input" />
+            </td>
+        </tr>
+    </table>
+    <table style="width: 100%; display: none;" id="faHgQueryContainer">
+        <tr class="border_b_1_da">
+            <td style="width: 84px;">
+                月份(开始):
+            </td>
+            <td style="width: 280px;">
+                <input name='monthBegin' type='text' data-required="true" class='webui-textbox' data-suggestions='["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]'/>
+            </td>
+            <td style="width: 68px;">
+                月份(结束):
+            </td>
+            <td style="width: 280px;">
+                <input name='monthEnd' type='text' data-required="true" class='webui-textbox' data-suggestions='["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]'/>
+            </td>
+            <td style="width: 68px;">
+                合同号:
+            </td>
+            <td>
+                <input type="text" id="hetongHao" name="hetongHao" class="text_input" />
+            </td>
+        </tr>
+    </table>
+    <table style="width: 100%; display: none" id="faBgQueryContainer">
+        <tr class="border_b_1_da">
+             <td style="width: 84px;">
+                报告名称:
+            </td>
+             <td style="width: 280px;">
+                <input name='baogaoMingcheng' id='baogaoMingcheng' type='text' class='webui-textbox' data-suggestions="@this.Url.Action("ReportNames", "Script")"/>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+
+<div class="content_container clearfix" id="faEgContainer" style="display: none;" >
+    <table id="faEgReturnDocGrid"></table>
+    <div id="faEgReturnDocPager"></div>
+</div>
+<div class="content_container clearfix"  id="faHgContainer" style="display: none;">
+    <table id="faHgReturnDocGrid"></table>
+    <div id="faHgReturnDocPager"></div>
+</div>
+<div class="content_container clearfix"  id="faBgContainer" style="display: none;">
+    <table id="faBgReturnDocGrid"></table>
+    <div id="faBgReturnDocPager"></div>
+</div>
+@*<div class="content_container clearfix">
+    <table id="faReturnDocGrid"></table>
+    <div id="faReturnDocPager"></div>
+</div>*@

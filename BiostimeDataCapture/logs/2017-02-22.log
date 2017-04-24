@@ -1,0 +1,15 @@
+2017-02-22 13:41:41.3188 INFO 用户2进入FaArchive/Index
+2017-02-22 13:47:28.0758 INFO 用户2进入FaArchive/Index
+2017-02-22 21:41:57.0614 INFO 用户2进入FaArchive/Index
+2017-02-22 22:10:04.5892 INFO 用户2进入FaArchive/Index
+2017-02-22 22:39:20.0710 INFO 用户2进入FaArchive/Index
+2017-02-22 22:41:35.4950 ERROR FaCabinetNo/SaveCabinetNo出现异常,ex.Message=未将对象引用设置到对象的实例。,ex.StackTrace=   在 BiostimeDataCapture.Controllers.FaCabinetNoController.SaveCabinetNo(FaCabinetNo cabinetNo) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaCabinetNoController.cs:行号 107,执行人:2
+2017-02-22 22:44:57.5794 INFO 用户2进入FaArchive/Index
+2017-02-22 22:48:28.7745 ERROR FaCabinetNo/SaveCabinetNo出现异常,ex.Message=未将对象引用设置到对象的实例。,ex.StackTrace=   在 BiostimeDataCapture.Controllers.FaCabinetNoController.SaveCabinetNo(FaCabinetNo cabinetNo) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaCabinetNoController.cs:行号 107,执行人:2
+2017-02-22 22:50:46.0169 ERROR FaCabinetNo/SaveCabinetNo出现异常,ex.Message=未将对象引用设置到对象的实例。,ex.StackTrace=   在 BiostimeDataCapture.Controllers.FaCabinetNoController.SaveCabinetNo(FaCabinetNo cabinetNo) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaCabinetNoController.cs:行号 107,执行人:2
+2017-02-22 22:54:15.1349 INFO 用户2进入FaArchive/Index
+2017-02-22 22:55:56.9246 ERROR FaCabinetNo/SaveCabinetNo出现异常,ex.Message=未将对象引用设置到对象的实例。,ex.StackTrace=   在 BiostimeDataCapture.Controllers.FaCabinetNoController.SaveCabinetNo(FaCabinetNo cabinetNo) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaCabinetNoController.cs:行号 107,执行人:2
+2017-02-22 23:05:38.9056 ERROR FaCabinetNo/SaveCabinetNo出现异常,ex.Message=未将对象引用设置到对象的实例。,ex.StackTrace=   在 BiostimeDataCapture.Controllers.FaCabinetNoController.SaveCabinetNo(FaCabinetNo cabinetNo) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaCabinetNoController.cs:行号 107,执行人:2
+2017-02-22 23:08:35.5111 INFO 用户2进入FaArchive/Index
+2017-02-22 23:10:53.0449 INFO 用户2进入FaArchive/Index
+2017-02-22 23:15:36.9278 ERROR FaCabinetNo/SaveCabinetNo出现异常,ex.Message=未将对象引用设置到对象的实例。,ex.StackTrace=   在 BiostimeDataCapture.Controllers.FaCabinetNoController.SaveCabinetNo(FaCabinetNo cabinetNo) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaCabinetNoController.cs:行号 107,执行人:2

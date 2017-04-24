@@ -63,6 +63,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
@@ -96,9 +97,6 @@
     </Reference>
     <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -134,20 +132,33 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ControllerBase.cs" />
     <Compile Include="Controllers\FaArchiveController.cs" />
+    <Compile Include="Controllers\FaArchiveLendController.cs" />
+    <Compile Include="Controllers\FaArchiveReturnController.cs" />
+    <Compile Include="Controllers\FaCabinetNoController.cs" />
+    <Compile Include="Controllers\FaCompanyController.cs" />
+    <Compile Include="Controllers\FaReportNameController.cs" />
     <Compile Include="Controllers\GeneralController.cs" />
+    <Compile Include="Controllers\ScriptController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\FaCabinet.cs" />
     <Compile Include="Models\JsonJqGrids\JsonJqGridObject.cs" />
     <Compile Include="Models\JsonJqGrids\JsonJqGridRowObject.cs" />
     <Compile Include="Models\Jsons\AbstractJsonService.cs" />
+    <Compile Include="Models\Jsons\FaCabineNoJsonService.cs" />
+    <Compile Include="Models\Jsons\FaCompanyJsonService.cs" />
     <Compile Include="Models\Jsons\FaDocJsonService.cs" />
+    <Compile Include="Models\Jsons\FaLendDocJsonService.cs" />
+    <Compile Include="Models\Jsons\FaReportNameJsonService.cs" />
+    <Compile Include="Models\Jsons\FaReturnDocJsonService.cs" />
     <Compile Include="Models\Jsons\JsonHelper.cs" />
     <Compile Include="Models\Utility\HtmlHelper.cs" />
     <Compile Include="Models\Utility\LogHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppFrontend\bower_components\bootstrap\bootstrap.min.js" />
     <Content Include="AppFrontend\bower_components\jquery-fileupload\jquery.fileupload.js" />
     <Content Include="AppFrontend\bower_components\jquery-fileupload\jquery.iframe-transport.js" />
     <Content Include="AppFrontend\bower_components\jquery-ui\jquery.jqgrid\grid.locale-cn.js" />
@@ -156,27 +167,38 @@
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\box.bg.normal.jpg" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_glass_65_ffffff_1x400.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_glass_75_e6e6e6_1x400.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_222222_256x240.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_454545_256x240.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_469bdd_256x240.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_888888_256x240.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_d8e7f3_256x240.png" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\images\ui-icons_f9bd01_256x240.png" />
-    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\jquery-ui-1.9.2.custom.css" />
+    <Content Include="AppFrontend\bower_components\jquery-ui\redmond\jquery-ui-1.8.23.custom.css" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\jquery-ui.custom.css" />
     <Content Include="AppFrontend\bower_components\jquery-ui\redmond\jquery-ui.custom.js" />
+    <Content Include="AppFrontend\bower_components\jquery\jquery-1.8.0.min.js" />
+    <Content Include="AppFrontend\bower_components\jquery\jquery-ui-1.8.23.custom.min.js" />
     <Content Include="AppFrontend\bower_components\jquery\jquery.custom.js" />
     <Content Include="AppFrontend\bower_components\jquery\jquery.js" />
     <Content Include="AppFrontend\bower_components\jquery\jquery.numeric.js" />
     <Content Include="AppFrontend\bower_components\jquery\jquery.validate.custom.js" />
     <Content Include="AppFrontend\bower_components\jquery\jquery.validate.js" />
+    <Content Include="AppFrontend\bower_components\webui\webui.js" />
     <Content Include="AppFrontend\css\webui.css.css" />
     <Content Include="AppFrontend\css\css.css" />
     <Content Include="AppFrontend\images\addnew.png" />
@@ -300,17 +322,28 @@
     <Content Include="AppFrontend\images\wait.gif" />
     <Content Include="AppFrontend\images\warning.png" />
     <Content Include="AppFrontend\images\wrap_bg.png" />
-    <Content Include="AppFrontend\Js\faArchive\fa.doc.list.js" />
+    <Content Include="AppFrontend\Js\faCabinetNo\fa.cabinetNo.list.js" />
+    <Content Include="AppFrontend\Js\faArchive\fa.archive.list.js" />
+    <Content Include="AppFrontend\Js\faCabinetNo\fa.cabinetNo.mgmt.js" />
+    <Content Include="AppFrontend\Js\faCompany\fa.company.mgmt.js" />
+    <Content Include="AppFrontend\Js\faCompany\fa.company.list.js" />
+    <Content Include="AppFrontend\Js\faArchive\fa.hg.mgmt.js" />
     <Content Include="AppFrontend\Js\faArchive\fa.layout.js" />
-    <Content Include="AppFrontend\Js\faArchive\fa.doc.mgmt.js" />
-    <Content Include="AppFrontend\Js\faArchive\fa.lenddoc.list.js" />
-    <Content Include="AppFrontend\Js\webui-popup-box\confirmation.js" />
-    <Content Include="AppFrontend\Js\webui-popup-box\prompt.js" />
-    <Content Include="AppFrontend\Js\webui\webui.ajax.js" />
-    <Content Include="AppFrontend\Js\webui\webui.grid.js" />
-    <Content Include="AppFrontend\Js\webui\webui.js" />
-    <Content Include="AppFrontend\Js\webui\webui.masterpage.js" />
-    <Content Include="AppFrontend\Js\webui\webui.validator.js" />
+    <Content Include="AppFrontend\Js\faArchive\fa.eg.mgmt.js" />
+    <Content Include="AppFrontend\Js\faArchiveLend\fa.lenddoc.list.js" />
+    <Content Include="AppFrontend\Js\faArchiveLend\fa.lenddoc.mgmt.js" />
+    <Content Include="AppFrontend\Js\faArchive\fa.bg.mgmt.js" />
+    <Content Include="AppFrontend\Js\faArchiveReturn\fa.returndoc.list.js" />
+    <Content Include="AppFrontend\Js\faArchiveReturn\fa.returnDoc.mgmt.js" />
+    <Content Include="AppFrontend\Js\faReportName\fa.reportName.list.js" />
+    <Content Include="AppFrontend\Js\faReportName\fa.reportName.mgmt.js" />
+    <Content Include="AppFrontend\Js\anna-popup-box\confirmation.js" />
+    <Content Include="AppFrontend\Js\anna-popup-box\prompt.js" />
+    <Content Include="AppFrontend\Js\anna\anna.ajax.js" />
+    <Content Include="AppFrontend\Js\anna\anna.grid.js" />
+    <Content Include="AppFrontend\Js\anna\anna.js" />
+    <Content Include="AppFrontend\Js\anna\anna.masterpage.js" />
+    <Content Include="AppFrontend\Js\anna\anna.validator.js" />
     <Content Include="Default.htm" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -327,7 +360,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\FaArchiveLend\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -336,10 +368,7 @@
     <Content Include="AppFrontend\images\quick_menu.bg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\FaArchive\_faArchiveLayout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\FaArchive\FaDocList.cshtml" />
+    <Content Include="Views\FaArchive\FaArchiveList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BiostimeDataCapture.AppService\BiostimeDataCapture.AppService.csproj">
@@ -360,7 +389,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\FaArchive\FaDocMgmt.cshtml" />
+    <Content Include="Views\FaArchive\FaEgMgmt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Error\LoginError.cshtml" />
@@ -375,7 +404,23 @@
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Views\FaArchive\FaLendDocList.cshtml" />
+    <Content Include="Views\FaArchiveReturn\FaReturnDocList.cshtml" />
+    <Content Include="Views\FaArchiveReturn\FaReturnDocMgmt.cshtml" />
+    <Content Include="Views\FaCabinetNo\FaCabinetNoList.cshtml" />
+    <None Include="Properties\PublishProfiles\BiostimeDataCapture.pubxml" />
+    <Content Include="Views\FaArchiveLend\FaLendDocList.cshtml" />
+    <Content Include="Views\FaArchiveLend\FaLendDocMgmt.cshtml" />
+    <Content Include="Views\Shared\Navigation.cshtml" />
+    <Content Include="Views\FaArchive\FaBgMgmt.cshtml" />
+    <Content Include="Views\FaArchive\FaHgMgmt.cshtml" />
+    <Content Include="_Templates\BgFaDocTemplate.xlsx" />
+    <Content Include="_Templates\EgFaDocTemplate.xlsx" />
+    <Content Include="_Templates\HgFaDocTemplate.xlsx" />
+    <Content Include="Views\FaCompany\FaCompanyList.cshtml" />
+    <Content Include="Views\FaCompany\FaCompanyMgmt.cshtml" />
+    <Content Include="Views\FaReportName\FaReportNameList.cshtml" />
+    <Content Include="Views\FaReportName\FaReportNameMgmt.cshtml" />
+    <Content Include="Views\FaCabinetNo\FaCabinetNoMgmt.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

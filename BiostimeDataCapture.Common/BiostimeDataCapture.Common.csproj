@@ -46,7 +46,14 @@
     <Compile Include="EDoc2Helper.cs" />
     <Compile Include="FormatHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegexHelper.cs" />
     <Compile Include="WebConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BiostimeDataCapture.Dto\BiostimeDataCapture.Dto.csproj">
+      <Project>{510b134c-adad-40d9-a4fc-291809c93d48}</Project>
+      <Name>BiostimeDataCapture.Dto</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

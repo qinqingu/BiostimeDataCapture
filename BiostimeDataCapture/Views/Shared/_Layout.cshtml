@@ -1,16 +1,20 @@
 ﻿@using System.Web.Optimization
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-    <link href="~/AppFrontend/bower_components/jquery-ui/redmond/jquery-ui.custom.css" rel="stylesheet" />
-    <link href="~/AppFrontend/css/css.css" rel="stylesheet" />
-    <link href="~/AppFrontend/css/webui.css.css" rel="stylesheet" />
-     @Scripts.Render("~/bundles/jquery")
-     @Scripts.Render("~/bundles/webuijs")
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <link href="~/AppFrontend/bower_components/jquery-ui/redmond/jquery-ui-1.8.23.custom.css" rel="stylesheet" />
+        <link href="~/AppFrontend/css/css.css" rel="stylesheet" />
+        <link href="~/AppFrontend/css/webui.css.css" rel="stylesheet" />
+        <script src="~/AppFrontend/bower_components/jquery/jquery-1.8.0.min.js"></script>
+        <script src="~/AppFrontend/bower_components/jquery/jquery-ui-1.8.23.custom.min.js"></script>
+        <script src="~/AppFrontend/bower_components/bootstrap/bootstrap.min.js"></script>
+        @Scripts.Render("~/bundles/jquery")
+        <script src="~/AppFrontend/bower_components/webui/webui.js"></script>
+        @Scripts.Render("~/bundles/annajs")
+    </head>
     <body>
         <form id="mainForm">
             <div id="errorContainer" class="error">
@@ -68,3 +72,8 @@
         </form>
     </body>
 </html>
+<script type="text/javascript" >
+    $("#mainForm").horizontalForm();
+    var form = $("#mainForm").form().data("form");
+   
+</script>

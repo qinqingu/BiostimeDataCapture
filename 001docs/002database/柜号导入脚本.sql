@@ -1,0 +1,1 @@
+  insert into [BiostimeDataCapture].[dbo].FaCabinetNo (CabinetNo) select F1 from [BiostimeDataCapture].[dbo].[Sheet1]

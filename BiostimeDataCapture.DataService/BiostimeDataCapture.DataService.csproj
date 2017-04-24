@@ -41,8 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FaCabinetNoRepository.cs" />
+    <Compile Include="FaCompanyRepository.cs" />
     <Compile Include="FaDocRepository.cs" />
-    <Compile Include="FaLendDocRepository.cs" />
+    <Compile Include="FaJieyueDocRepository.cs" />
+    <Compile Include="FaArchiveLendRepository.cs" />
+    <Compile Include="FaReportNameRepository.cs" />
+    <Compile Include="FaReturnDocRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="_RepositoryCore\AbstractRepository.cs" />
     <Compile Include="_RepositoryCore\DataContextFactory.cs" />

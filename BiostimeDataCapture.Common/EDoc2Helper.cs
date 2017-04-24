@@ -85,6 +85,32 @@ namespace BiostimeDataCapture.Common
         }
 
         /// <summary>
+        ///     判断用户是否在指定用户中
+        /// </summary>
+        /// <param name="userIdentityId"></param>
+        /// <param name="groupId"></param>
+        /// <returns></returns>
+        public static bool IsUserInUserGroup(int userIdentityId, int groupId)
+        {
+            try
+            {
+                //var organizationApiProvider = new OrganizationApiProvider();
+                //return organizationApiProvider.IsUserInUserGroup(userIdentityId, groupId, recursive);
+                bool hasValue = false;
+                IList<int> userIds = GetChildUserListInGroup(groupId);
+                if (userIds.IndexOf(userIdentityId) != -1 || userIdentityId == WebConfig.Edoc2AdminUserId)
+                {
+                    hasValue = true;
+                }
+                return hasValue;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("IsUserInUserGroup Exception,exMessage=" + ex.Message);
+            }
+        }
+
+        /// <summary>
         ///     根据部门ID获取所有子部门
         /// </summary>
         /// <param name="deptId">所在部门ID</param>

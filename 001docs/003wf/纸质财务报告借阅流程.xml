@@ -1,0 +1,272 @@
+
+<Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>df3821eb-1e72-4574-b758-f4d1a0af5262</Id>
+  <Name>纸质财务报告借阅流程</Name>
+  <Ver>1</Ver>
+  <CreateTime>2017-02-08T15:15:50.57</CreateTime>
+  <UserType>8</UserType>
+  <User>1</User>
+  <Desc>纸质财务报告借阅流程</Desc>
+  <FormUrl>../BiostimeProcess/Pages/Report/Transfer.aspx</FormUrl>
+  <ProcType>0</ProcType>
+</Process>
+<ArrayOfTransition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Transition>
+    <Id>dd7085a4-8a31-f4a0-d129-d5b3a7426df4</Id>
+    <StepId>d0dff550-2493-7f8d-48cf-cf275da6e7b0</StepId>
+    <Rules>And fenzhizouxiang == 否,</Rules>
+    <TranTo>0893f3f4-906a-6ca9-d727-c03d0367a920</TranTo>
+    <TranRulesHtml />
+    <ProcessId />
+  </Transition>
+  <Transition>
+    <Id>eda95615-6796-4c87-5fb3-e92ec34f1a14</Id>
+    <StepId>d0dff550-2493-7f8d-48cf-cf275da6e7b0</StepId>
+    <Rules>And fenzhizouxiang == 是,</Rules>
+    <TranTo>7792cad0-2290-8905-27d4-afa105d70faf</TranTo>
+    <TranRulesHtml />
+    <ProcessId />
+  </Transition>
+</ArrayOfTransition>
+<ArrayOfStep xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Step>
+    <Step_ownerName />
+    <Height>50</Height>
+    <Width>100</Width>
+    <Id>0893f3f4-906a-6ca9-d727-c03d0367a920</Id>
+    <Name>审批</Name>
+    <Proc_Id>df3821eb-1e72-4574-b758-f4d1a0af5262</Proc_Id>
+    <OwnerType>StepStarter</OwnerType>
+    <Owner />
+    <PrevStep />
+    <StepType>UserStep</StepType>
+    <FormUrl />
+    <NotifyByMail>false</NotifyByMail>
+    <NotifyBySms>false</NotifyBySms>
+    <RecipientAttribute />
+    <CompleteTime>2880</CompleteTime>
+    <Congfig>0</Congfig>
+    <Identity>审批</Identity>
+    <MsgMailTemplate />
+    <OverTimeMailTemplate />
+    <IsJumpStep>false</IsJumpStep>
+    <SameNextUserJumpStep>false</SameNextUserJumpStep>
+    <SameNextUserIsGroup>false</SameNextUserIsGroup>
+    <SameUserJumpStep>false</SameUserJumpStep>
+    <SameUserIsGroup>false</SameUserIsGroup>
+    <IsSelectNextStep>false</IsSelectNextStep>
+    <StepLeft>230</StepLeft>
+    <StepTop>97</StepTop>
+    <IsAutoSubmit>false</IsAutoSubmit>
+    <IsShared>false</IsShared>
+    <IsSignature>false</IsSignature>
+    <MergeCount />
+    <MergeType>None</MergeType>
+    <RobotActionConfig />
+    <RobotType>None</RobotType>
+  </Step>
+  <Step>
+    <Step_ownerName />
+    <Height>50</Height>
+    <Width>50</Width>
+    <Id>1dac25d7-6627-7394-1db2-bfe319ba244d</Id>
+    <Name>结束</Name>
+    <Proc_Id>df3821eb-1e72-4574-b758-f4d1a0af5262</Proc_Id>
+    <OwnerType>Null</OwnerType>
+    <Owner />
+    <PrevStep />
+    <StepType>EndStep</StepType>
+    <FormUrl />
+    <NotifyByMail>false</NotifyByMail>
+    <NotifyBySms>false</NotifyBySms>
+    <RecipientAttribute />
+    <CompleteTime>0</CompleteTime>
+    <Congfig>0</Congfig>
+    <Identity />
+    <MsgMailTemplate />
+    <OverTimeMailTemplate />
+    <IsJumpStep>false</IsJumpStep>
+    <SameNextUserJumpStep>false</SameNextUserJumpStep>
+    <SameNextUserIsGroup>false</SameNextUserIsGroup>
+    <SameUserJumpStep>false</SameUserJumpStep>
+    <SameUserIsGroup>false</SameUserIsGroup>
+    <IsSelectNextStep>false</IsSelectNextStep>
+    <StepLeft>511</StepLeft>
+    <StepTop>200</StepTop>
+    <IsAutoSubmit>false</IsAutoSubmit>
+    <IsShared>false</IsShared>
+    <IsSignature>false</IsSignature>
+    <MergeCount />
+    <MergeType>None</MergeType>
+    <RobotActionConfig />
+    <RobotType>None</RobotType>
+  </Step>
+  <Step>
+    <Step_ownerName />
+    <Height>50</Height>
+    <Width>50</Width>
+    <Id>5fce1f21-a089-d3d7-a55a-ffbd72ae011f</Id>
+    <Name>开始</Name>
+    <Proc_Id>df3821eb-1e72-4574-b758-f4d1a0af5262</Proc_Id>
+    <OwnerType>Null</OwnerType>
+    <Owner />
+    <PrevStep />
+    <StepType>StartStep</StepType>
+    <FormUrl />
+    <NotifyByMail>false</NotifyByMail>
+    <NotifyBySms>false</NotifyBySms>
+    <RecipientAttribute />
+    <CompleteTime>0</CompleteTime>
+    <Congfig>0</Congfig>
+    <Identity>开始</Identity>
+    <MsgMailTemplate />
+    <OverTimeMailTemplate />
+    <IsJumpStep>false</IsJumpStep>
+    <SameNextUserJumpStep>false</SameNextUserJumpStep>
+    <SameNextUserIsGroup>false</SameNextUserIsGroup>
+    <SameUserJumpStep>false</SameUserJumpStep>
+    <SameUserIsGroup>false</SameUserIsGroup>
+    <IsSelectNextStep>false</IsSelectNextStep>
+    <StepLeft>130</StepLeft>
+    <StepTop>200</StepTop>
+    <IsAutoSubmit>false</IsAutoSubmit>
+    <IsShared>false</IsShared>
+    <IsSignature>false</IsSignature>
+    <MergeCount />
+    <MergeType>None</MergeType>
+    <RobotActionConfig />
+    <RobotType>None</RobotType>
+  </Step>
+  <Step>
+    <Step_ownerName />
+    <Height>50</Height>
+    <Width>100</Width>
+    <Id>7792cad0-2290-8905-27d4-afa105d70faf</Id>
+    <Name>档案管理员审批</Name>
+    <Proc_Id>df3821eb-1e72-4574-b758-f4d1a0af5262</Proc_Id>
+    <OwnerType>StepStarter</OwnerType>
+    <Owner />
+    <PrevStep />
+    <StepType>UserStep</StepType>
+    <FormUrl />
+    <NotifyByMail>false</NotifyByMail>
+    <NotifyBySms>false</NotifyBySms>
+    <RecipientAttribute />
+    <CompleteTime>2880</CompleteTime>
+    <Congfig>0</Congfig>
+    <Identity>最终审批</Identity>
+    <MsgMailTemplate />
+    <OverTimeMailTemplate />
+    <IsJumpStep>false</IsJumpStep>
+    <SameNextUserJumpStep>false</SameNextUserJumpStep>
+    <SameNextUserIsGroup>false</SameNextUserIsGroup>
+    <SameUserJumpStep>false</SameUserJumpStep>
+    <SameUserIsGroup>false</SameUserIsGroup>
+    <IsSelectNextStep>false</IsSelectNextStep>
+    <StepLeft>373</StepLeft>
+    <StepTop>95</StepTop>
+    <IsAutoSubmit>false</IsAutoSubmit>
+    <IsShared>false</IsShared>
+    <IsSignature>false</IsSignature>
+    <MergeCount />
+    <MergeType>None</MergeType>
+    <RobotActionConfig />
+    <RobotType>None</RobotType>
+  </Step>
+  <Step>
+    <Step_ownerName />
+    <Height>50</Height>
+    <Width>50</Width>
+    <Id>d0dff550-2493-7f8d-48cf-cf275da6e7b0</Id>
+    <Name>分支走向</Name>
+    <Proc_Id>df3821eb-1e72-4574-b758-f4d1a0af5262</Proc_Id>
+    <OwnerType>Null</OwnerType>
+    <Owner />
+    <PrevStep />
+    <StepType>BranchStep</StepType>
+    <FormUrl />
+    <NotifyByMail>false</NotifyByMail>
+    <NotifyBySms>false</NotifyBySms>
+    <RecipientAttribute />
+    <CompleteTime>0</CompleteTime>
+    <Congfig>0</Congfig>
+    <Identity />
+    <MsgMailTemplate />
+    <OverTimeMailTemplate />
+    <IsJumpStep>false</IsJumpStep>
+    <SameNextUserJumpStep>false</SameNextUserJumpStep>
+    <SameNextUserIsGroup>false</SameNextUserIsGroup>
+    <SameUserJumpStep>false</SameUserJumpStep>
+    <SameUserIsGroup>false</SameUserIsGroup>
+    <IsSelectNextStep>false</IsSelectNextStep>
+    <StepLeft>255</StepLeft>
+    <StepTop>200</StepTop>
+    <IsAutoSubmit>false</IsAutoSubmit>
+    <IsShared>false</IsShared>
+    <IsSignature>false</IsSignature>
+    <MergeCount />
+    <MergeType>None</MergeType>
+    <RobotActionConfig />
+    <RobotType>None</RobotType>
+  </Step>
+</ArrayOfStep>
+<ArrayOfStepRelation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <StepRelation>
+    <Y>-10</Y>
+    <X>0</X>
+    <Dots>{x:535,y:119}</Dots>
+    <Name />
+    <Id>15d0a75a-453d-2667-a880-5d495702f2b2</Id>
+    <ParentStepId>7792cad0-2290-8905-27d4-afa105d70faf</ParentStepId>
+    <StepId>1dac25d7-6627-7394-1db2-bfe319ba244d</StepId>
+    <ProcessId>df3821eb-1e72-4574-b758-f4d1a0af5262</ProcessId>
+  </StepRelation>
+  <StepRelation>
+    <Y>-10</Y>
+    <X>0</X>
+    <Dots />
+    <Name />
+    <Id>54c8d357-73ec-4588-95eb-d74d48b964b4</Id>
+    <ParentStepId>d0dff550-2493-7f8d-48cf-cf275da6e7b0</ParentStepId>
+    <StepId>0893f3f4-906a-6ca9-d727-c03d0367a920</StepId>
+    <ProcessId>df3821eb-1e72-4574-b758-f4d1a0af5262</ProcessId>
+  </StepRelation>
+  <StepRelation>
+    <Y>-10</Y>
+    <X>0</X>
+    <Dots>{x:422,y:226}</Dots>
+    <Name />
+    <Id>7d5e9fb4-083a-7672-1f44-36328a1aae19</Id>
+    <ParentStepId>d0dff550-2493-7f8d-48cf-cf275da6e7b0</ParentStepId>
+    <StepId>7792cad0-2290-8905-27d4-afa105d70faf</StepId>
+    <ProcessId>df3821eb-1e72-4574-b758-f4d1a0af5262</ProcessId>
+  </StepRelation>
+  <StepRelation>
+    <Y>-10</Y>
+    <X>0</X>
+    <Dots />
+    <Name />
+    <Id>ee944d93-78e0-f11c-3dac-beddb7db52bc</Id>
+    <ParentStepId>0893f3f4-906a-6ca9-d727-c03d0367a920</ParentStepId>
+    <StepId>7792cad0-2290-8905-27d4-afa105d70faf</StepId>
+    <ProcessId>df3821eb-1e72-4574-b758-f4d1a0af5262</ProcessId>
+  </StepRelation>
+  <StepRelation>
+    <Y>-10</Y>
+    <X>0</X>
+    <Dots />
+    <Name />
+    <Id>f9068a9e-ff98-83dc-e207-d2df6265cdce</Id>
+    <ParentStepId>5fce1f21-a089-d3d7-a55a-ffbd72ae011f</ParentStepId>
+    <StepId>d0dff550-2493-7f8d-48cf-cf275da6e7b0</StepId>
+    <ProcessId>df3821eb-1e72-4574-b758-f4d1a0af5262</ProcessId>
+  </StepRelation>
+</ArrayOfStepRelation>
+<ArrayOfProcessVar xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ProcessVar>
+    <Id>fenzhizouxiang</Id>
+    <Proc_Id>df3821eb-1e72-4574-b758-f4d1a0af5262</Proc_Id>
+    <Name>fenzhizouxiang</Name>
+    <Desc>分支走向</Desc>
+  </ProcessVar>
+</ArrayOfProcessVar>

@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "报告名称管理";
+    Layout = "../Shared/Navigation.cshtml";
+}
+
+@Styles.Render("~/bundles/gridcss")
+@Scripts.Render("~/bundles/gridjs")
+@Scripts.Render("~/bundles/fareportNamejs")
+<div class="box">
+    <div class="search beleft margin_l_10">
+        <div class="search_box" title="支持报告名称模糊查询.">
+            <input type="text" id="searchText" style="width: 200px;" placeholder="报告名称"/>				
+        </div>
+        <span class="margin_r_10">报告名称信息</span>
+    </div>
+    <div class="tab_button">
+        <select  id="reprotNameStates" style="width: 80px;" title="状态选择">
+            <option selected="selected" value="">选择</option>
+            <option value="true">启用</option>
+            <option value="false">禁用</option>
+        </select>
+    </div>
+    <div class="tab_button">
+        <a id="searchButton" class="button02">
+            <span class="l"></span>
+            <span class="m">搜索</span>
+            <span class="r"></span>
+        </a>
+         <a id="addButton" href="FaReportNameMgmt" class="button02">
+            <span class="l"></span>
+            <span class="m">添加</span>
+            <span class="r"></span>
+        </a>
+    </div>
+</div>
+<div class="content_container clearfix">
+    <table id="dataGrid"></table>
+    <div id="dataPager"></div>
+</div>
+

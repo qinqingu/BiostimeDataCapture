@@ -198,6 +198,12 @@ h1 {
     height: 20px;
     width: 190px;
 }
+ .webui-textbox {
+    background-color: #f3f3f3;
+    border: 1px solid #d7d7d7;
+    height: 20px;
+    width: 190px;
+}
 
 input.on { border: 1px dashed #ff6600; }
 

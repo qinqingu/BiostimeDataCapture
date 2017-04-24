@@ -1,0 +1,146 @@
+
+<Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Id>d799411a-1e54-4929-a985-77532793a313</Id>
+  <Name>纸质凭证借阅流程</Name>
+  <Ver>1</Ver>
+  <CreateTime>2017-03-02T21:02:16.37</CreateTime>
+  <UserType>8</UserType>
+  <User>1</User>
+  <Desc>纸质凭证借阅流程</Desc>
+  <FormUrl>../BiostimeProcess/Pages/Voucher/Transfer.aspx</FormUrl>
+  <ProcType>0</ProcType>
+</Process>
+<ArrayOfTransition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+<ArrayOfStep xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Step>
+    <Step_ownerName />
+    <Height>50</Height>
+    <Width>50</Width>
+    <Id>704cfb95-fa22-ae32-017f-627a6cd5dc9d</Id>
+    <Name>结束</Name>
+    <Proc_Id>d799411a-1e54-4929-a985-77532793a313</Proc_Id>
+    <OwnerType>Null</OwnerType>
+    <Owner />
+    <PrevStep />
+    <StepType>EndStep</StepType>
+    <FormUrl />
+    <NotifyByMail>false</NotifyByMail>
+    <NotifyBySms>false</NotifyBySms>
+    <RecipientAttribute />
+    <CompleteTime>0</CompleteTime>
+    <Congfig>0</Congfig>
+    <Identity />
+    <MsgMailTemplate />
+    <OverTimeMailTemplate />
+    <IsJumpStep>false</IsJumpStep>
+    <SameNextUserJumpStep>false</SameNextUserJumpStep>
+    <SameNextUserIsGroup>false</SameNextUserIsGroup>
+    <SameUserJumpStep>false</SameUserJumpStep>
+    <SameUserIsGroup>false</SameUserIsGroup>
+    <IsSelectNextStep>false</IsSelectNextStep>
+    <StepLeft>530</StepLeft>
+    <StepTop>200</StepTop>
+    <IsAutoSubmit>false</IsAutoSubmit>
+    <IsShared>false</IsShared>
+    <IsSignature>false</IsSignature>
+    <MergeCount />
+    <MergeType>None</MergeType>
+    <RobotActionConfig />
+    <RobotType>None</RobotType>
+  </Step>
+  <Step>
+    <Step_ownerName />
+    <Height>50</Height>
+    <Width>100</Width>
+    <Id>890295f2-d6df-28ae-5ddc-53bd863f1a85</Id>
+    <Name>档案管理员审批</Name>
+    <Proc_Id>d799411a-1e54-4929-a985-77532793a313</Proc_Id>
+    <OwnerType>StepStarter</OwnerType>
+    <Owner />
+    <PrevStep />
+    <StepType>UserStep</StepType>
+    <FormUrl />
+    <NotifyByMail>false</NotifyByMail>
+    <NotifyBySms>false</NotifyBySms>
+    <RecipientAttribute />
+    <CompleteTime>2880</CompleteTime>
+    <Congfig>0</Congfig>
+    <Identity>最终审批</Identity>
+    <MsgMailTemplate />
+    <OverTimeMailTemplate />
+    <IsJumpStep>false</IsJumpStep>
+    <SameNextUserJumpStep>false</SameNextUserJumpStep>
+    <SameNextUserIsGroup>false</SameNextUserIsGroup>
+    <SameUserJumpStep>false</SameUserJumpStep>
+    <SameUserIsGroup>false</SameUserIsGroup>
+    <IsSelectNextStep>false</IsSelectNextStep>
+    <StepLeft>287</StepLeft>
+    <StepTop>201</StepTop>
+    <IsAutoSubmit>false</IsAutoSubmit>
+    <IsShared>false</IsShared>
+    <IsSignature>false</IsSignature>
+    <MergeCount />
+    <MergeType>None</MergeType>
+    <RobotActionConfig />
+    <RobotType>None</RobotType>
+  </Step>
+  <Step>
+    <Step_ownerName />
+    <Height>50</Height>
+    <Width>50</Width>
+    <Id>e532ea88-f57e-dbd7-1250-00726ad384ce</Id>
+    <Name>开始</Name>
+    <Proc_Id>d799411a-1e54-4929-a985-77532793a313</Proc_Id>
+    <OwnerType>Null</OwnerType>
+    <Owner />
+    <PrevStep />
+    <StepType>StartStep</StepType>
+    <FormUrl />
+    <NotifyByMail>false</NotifyByMail>
+    <NotifyBySms>false</NotifyBySms>
+    <RecipientAttribute />
+    <CompleteTime>0</CompleteTime>
+    <Congfig>0</Congfig>
+    <Identity>开始</Identity>
+    <MsgMailTemplate />
+    <OverTimeMailTemplate />
+    <IsJumpStep>false</IsJumpStep>
+    <SameNextUserJumpStep>false</SameNextUserJumpStep>
+    <SameNextUserIsGroup>false</SameNextUserIsGroup>
+    <SameUserJumpStep>false</SameUserJumpStep>
+    <SameUserIsGroup>false</SameUserIsGroup>
+    <IsSelectNextStep>false</IsSelectNextStep>
+    <StepLeft>130</StepLeft>
+    <StepTop>200</StepTop>
+    <IsAutoSubmit>false</IsAutoSubmit>
+    <IsShared>false</IsShared>
+    <IsSignature>false</IsSignature>
+    <MergeCount />
+    <MergeType>None</MergeType>
+    <RobotActionConfig />
+    <RobotType>None</RobotType>
+  </Step>
+</ArrayOfStep>
+<ArrayOfStepRelation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <StepRelation>
+    <Y>-10</Y>
+    <X>0</X>
+    <Dots />
+    <Name />
+    <Id>e1e59911-c0a6-b239-b6b0-1f0cfa38d704</Id>
+    <ParentStepId>890295f2-d6df-28ae-5ddc-53bd863f1a85</ParentStepId>
+    <StepId>704cfb95-fa22-ae32-017f-627a6cd5dc9d</StepId>
+    <ProcessId>d799411a-1e54-4929-a985-77532793a313</ProcessId>
+  </StepRelation>
+  <StepRelation>
+    <Y>-10</Y>
+    <X>0</X>
+    <Dots />
+    <Name />
+    <Id>edabdd98-7cae-2083-4700-255b42a29b1a</Id>
+    <ParentStepId>e532ea88-f57e-dbd7-1250-00726ad384ce</ParentStepId>
+    <StepId>890295f2-d6df-28ae-5ddc-53bd863f1a85</StepId>
+    <ProcessId>d799411a-1e54-4929-a985-77532793a313</ProcessId>
+  </StepRelation>
+</ArrayOfStepRelation>
+<ArrayOfProcessVar xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />

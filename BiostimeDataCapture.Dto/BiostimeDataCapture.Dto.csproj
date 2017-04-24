@@ -40,8 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FaDocDto.cs" />
-    <Compile Include="FaDocListParameter.cs" />
+    <Compile Include="FaArchiveListParameter.cs" />
+    <Compile Include="JieYueDocDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegexList.cs" />
     <Compile Include="_Common\OrderingParameter.cs" />
     <Compile Include="_Common\PagingParameter.cs" />
     <Compile Include="_Common\SaveListResult.cs" />

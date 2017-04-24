@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
+using BiostimeDataCapture.AppService;
 using BiostimeDataCapture.Common;
+using BiostimeDataCapture.Domain;
 using BiostimeDataCapture.Models.Jsons;
 using EDoc2.ApiClientManage.Organization;
 
@@ -8,6 +11,7 @@ namespace BiostimeDataCapture.Controllers
 {
     public class ControllerBase : Controller
     {
+        private readonly FaDocService _faDocService = new FaDocService();
         protected int SessionUserId
         {
             get { return Session["UserId"] == null ? 0 : (int) Session["UserId"]; }
@@ -31,6 +35,19 @@ namespace BiostimeDataCapture.Controllers
                     Session.Remove("UserRealName");
                 }
                 Session.Add("UserRealName", value);
+            }
+        }
+
+        protected string SessionToken
+        {
+            get { return Session["Token"] == null ? string.Empty : Session["Token"].ToString(); }
+            set
+            {
+                if (Session["Token"] != null)
+                {
+                    Session.Remove("Token");
+                }
+                Session.Add("Token", value);
             }
         }
 
@@ -61,50 +78,50 @@ namespace BiostimeDataCapture.Controllers
                 return true;
             }
             ViewData["edoc2LoginUrl"] = WebConfig.EdocUrl + "/ocm/Api/Auth/Login";
-            if (Request.Cookies["token"] == null)
+            if (Request["token"] == null)
             {
-                ViewData["edoc2LoginErrorMsg"] = "token cookies is null";
+                ViewData["edoc2LoginErrorMsg"] = "token  is null";
                 return false;
             }
             try
             {
-                string currentToken = Request.Cookies["token"].Value;
+                //string currentToken = Request.Cookies["token"].Value;
+                string currentToken = Request["token"];
                 if (!EDoc2Helper.IsLogin(currentToken))
                 {
                     ViewData["edoc2LoginErrorMsg"] = "currentToken login has expired";
                     return false;
                 }
                 EDocUserInfo eDoc2UserInfo = EDoc2Helper.GetUserInfoByToken(currentToken);
-                //判断如果是管理员帐号就允许进入
-                if (eDoc2UserInfo.UserId == 2)
+                SessionUserId = eDoc2UserInfo.UserId;
+                SessionUserRealName = eDoc2UserInfo.UserRealName;
+                SessionToken = currentToken;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                ViewData["edoc2LoginErrorMsg"] = "ex.Message" + ex.Message;
+                return false;
+            }
+        }
+
+        protected bool IsValidAccount(string token)
+        {
+            if (WebConfig.IsDebug)
+            {
+                SessionUserId = 2;
+                SessionUserRealName = "Administrator";
+                return true;
+            }
+            ViewData["edoc2LoginUrl"] = WebConfig.EdocUrl + "/ocm/Api/Auth/Login";
+            try
+            {
+                if (!EDoc2Helper.IsLogin(token))
                 {
-                    SessionUserId = eDoc2UserInfo.UserId;
-                    SessionUserRealName = eDoc2UserInfo.UserRealName;
-                    return true;
-                }
-                if (Request.Url == null)
-                {
+                    ViewData["edoc2LoginErrorMsg"] = "currentToken login has expired";
                     return false;
                 }
-                string url = Request.Url.AbsoluteUri;
-                //if (WebConfig.FdRoleGroupId > 0 && url.Contains("JfzDataCapture/FinanceDept"))
-                //{
-                //    IList<int> userIds = EDoc2Helper.GetChildUserListInGroup(WebConfig.FdRoleGroupId);
-                //    if (!userIds.Contains(eDoc2UserInfo.UserId))
-                //    {
-                //        ViewData["edoc2LoginErrorMsg"] = "current user without authorization";
-                //        return false;
-                //    }
-                //}
-                //if (WebConfig.AdRoleGroupId > 0 && url.Contains("JfzDataCapture/AdminDept"))
-                //{
-                //    IList<int> userIds = EDoc2Helper.GetChildUserListInGroup(WebConfig.AdRoleGroupId);
-                //    if (!userIds.Contains(eDoc2UserInfo.UserId))
-                //    {
-                //        ViewData["edoc2LoginErrorMsg"] = "current user without authorization";
-                //        return false;
-                //    }
-                //}
+                EDocUserInfo eDoc2UserInfo = EDoc2Helper.GetUserInfoByToken(token);
                 SessionUserId = eDoc2UserInfo.UserId;
                 SessionUserRealName = eDoc2UserInfo.UserRealName;
                 return true;
@@ -113,6 +130,34 @@ namespace BiostimeDataCapture.Controllers
             {
                 ViewData["edoc2LoginErrorMsg"] = "ex.Message" + ex.Message;
                 return false;
+            }
+        }
+
+        public void SetJieyueDetials(long id)
+        {
+            Jieyue entity = _faDocService.GetJieyueById(id);
+            ViewData["faJieyueId"] = id;
+            ViewData["content"] = entity.FaArchive.Content;
+            ViewData["company"] = entity.FaArchive.Company;
+            ViewData["year"] = entity.FaArchive.Year;
+            ViewData["month"] = entity.FaArchive.Month;
+            ViewData["voucherWord"] = entity.FaArchive.VoucherWord;
+            ViewData["voucherNumber"] = entity.FaArchive.VoucherNumber;
+            ViewData["voucherNo"] = entity.FaArchive.VoucherNo;
+            ViewData["hetongHao"] = entity.FaArchive.HetongHao;
+            ViewData["baogaoMingcheng"] = entity.FaArchive.BaogaoMingcheng;
+            ViewData["path"] = entity.FaArchive.Path;
+            ViewData["cabinetNo"] = entity.FaArchive.CabinetNo;
+            ViewData["cabinetNo"] = entity.FaArchive.CabinetNo;
+            ViewData["jieyueTianshu"] = entity.JieyueTianshu;
+            ViewData["jieyueshijian"] = FormatHelper.GetIsoDateString(entity.JieyueShijian);
+            if (entity.ZidingyiGuihuanShijian != null)
+            {
+                ViewData["guihuanShijian"] = FormatHelper.GetIsoDateString(entity.ZidingyiGuihuanShijian);
+            }
+            else
+            {
+                ViewData["guihuanShijian"] = FormatHelper.GetIsoDateString(entity.JieyueShijian.AddDays(entity.JieyueTianshu));
             }
         }
     }

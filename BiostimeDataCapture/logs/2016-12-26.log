@@ -1,0 +1,192 @@
+2016-12-26 09:43:51.6558 INFO 用户2进入FaArchive/Index
+2016-12-26 10:51:40.3948 INFO 用户2进入FaArchive/Index
+2016-12-26 10:54:57.0650 INFO 用户2进入FaArchive/Index
+2016-12-26 10:55:51.8516 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 10:55:54.9285 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 10:56:06.3104 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 10:56:11.6331 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 10:57:22.2224 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 10:57:27.1033 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 10:58:10.1750 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 10:58:13.3041 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:08:38.4884 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:19:00.0801 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:22:24.3684 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:24:14.9487 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:24:19.0029 INFO 用户2进入FaArchive/Index
+2016-12-26 11:24:20.4123 INFO 用户2进入FaArchive/FaDocMgmt
+2016-12-26 11:24:24.1508 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:25:07.5909 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:30:47.8845 INFO 用户2进入FaArchive/Index
+2016-12-26 11:31:27.6791 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:31:58.6035 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:32:28.5189 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:34:07.2245 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:36:30.0927 INFO 用户2进入FaArchive/Index
+2016-12-26 11:36:44.5215 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:36:57.8983 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:38:42.1641 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:39:11.9725 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:40:46.3339 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:41:04.7848 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:41:52.5531 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:42:01.1459 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:46:38.1922 ERROR FaArchive/SaveFaLendDoc出现异常,ex.Message=序列不包含任何元素,ex.StackTrace=   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 BiostimeDataCapture.DataService.FaJieyueDocRepository.FindById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.DataService\FaJieyueDocRepository.cs:行号 16
+   在 BiostimeDataCapture.AppService.FaDocService.GetJieyueById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\FaDocService.cs:行号 48
+   在 BiostimeDataCapture.Controllers.FaArchiveController.SaveFaLendDoc(Jieyue faLendDoc) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaArchiveController.cs:行号 249,执行人:2
+2016-12-26 11:46:42.7066 ERROR FaArchive/SaveFaLendDoc出现异常,ex.Message=序列不包含任何元素,ex.StackTrace=   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 BiostimeDataCapture.DataService.FaJieyueDocRepository.FindById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.DataService\FaJieyueDocRepository.cs:行号 16
+   在 BiostimeDataCapture.AppService.FaDocService.GetJieyueById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\FaDocService.cs:行号 48
+   在 BiostimeDataCapture.Controllers.FaArchiveController.SaveFaLendDoc(Jieyue faLendDoc) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaArchiveController.cs:行号 249,执行人:2
+2016-12-26 11:49:28.4633 INFO 用户2进入FaArchive/Index
+2016-12-26 11:49:35.9156 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:50:19.8584 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:50:25.3652 ERROR FaArchive/SaveFaLendDoc出现异常,ex.Message=序列不包含任何元素,ex.StackTrace=   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 BiostimeDataCapture.DataService.FaJieyueDocRepository.FindById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.DataService\FaJieyueDocRepository.cs:行号 16
+   在 BiostimeDataCapture.AppService.FaDocService.GetJieyueById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\FaDocService.cs:行号 48
+   在 BiostimeDataCapture.Controllers.FaArchiveController.SaveFaLendDoc(Jieyue faLendDoc) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaArchiveController.cs:行号 249,执行人:2
+2016-12-26 11:50:43.6718 INFO 用户2进入FaArchive/Index
+2016-12-26 11:50:55.8932 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:52:53.4963 ERROR FaArchive/SaveFaLendDoc出现异常,ex.Message=序列不包含任何元素,ex.StackTrace=   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 BiostimeDataCapture.DataService.FaJieyueDocRepository.FindById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.DataService\FaJieyueDocRepository.cs:行号 16
+   在 BiostimeDataCapture.AppService.FaDocService.GetJieyueById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\FaDocService.cs:行号 48
+   在 BiostimeDataCapture.Controllers.FaArchiveController.SaveFaLendDoc(Jieyue faLendDoc) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaArchiveController.cs:行号 249,执行人:2
+2016-12-26 11:53:40.0901 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:58:27.4521 INFO FaLendDoc数据保存成功，编号:2,操作人:2,时间:2016/12/26 11:58:27。
+2016-12-26 11:58:28.6149 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:58:33.4905 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:58:38.4764 INFO FaLendDoc数据保存成功，编号:2,操作人:2,时间:2016/12/26 11:58:38。
+2016-12-26 11:58:40.1272 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:59:35.4452 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 11:59:49.3230 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 12:00:57.4769 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 12:01:03.8347 INFO FaLendDoc数据保存成功，编号:2,操作人:2,时间:2016/12/26 12:01:03。
+2016-12-26 12:01:04.7581 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 12:01:17.2072 INFO 用户2进入FaArchive/Index
+2016-12-26 12:01:23.6454 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 12:40:33.6039 INFO 用户2进入FaArchive/Index
+2016-12-26 12:41:29.6845 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 12:42:24.3811 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 12:42:46.9620 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 12:42:51.2858 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 12:43:26.0783 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 12:53:46.9952 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 12:54:02.8483 ERROR FaArchive/SaveFaLendDoc出现异常,ex.Message=序列不包含任何元素,ex.StackTrace=   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 BiostimeDataCapture.DataService.FaJieyueDocRepository.FindById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.DataService\FaJieyueDocRepository.cs:行号 16
+   在 BiostimeDataCapture.AppService.FaDocService.GetJieyueById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\FaDocService.cs:行号 48
+   在 BiostimeDataCapture.Controllers.FaArchiveController.SaveFaLendDoc(Jieyue faLendDoc) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaArchiveController.cs:行号 272,执行人:2
+2016-12-26 13:06:11.0976 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:06:17.2885 ERROR FaArchive/SaveFaLendDoc出现异常,ex.Message=序列不包含任何元素,ex.StackTrace=   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 BiostimeDataCapture.DataService.FaJieyueDocRepository.FindById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.DataService\FaJieyueDocRepository.cs:行号 16
+   在 BiostimeDataCapture.AppService.FaDocService.GetJieyueById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\FaDocService.cs:行号 48
+   在 BiostimeDataCapture.Controllers.FaArchiveController.SaveJieyueInfo(Jieyue jieyueInfo) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaArchiveController.cs:行号 274,执行人:2
+2016-12-26 13:13:50.2385 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:13:54.7131 ERROR FaArchive/SaveFaLendDoc出现异常,ex.Message=序列不包含任何元素,ex.StackTrace=   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 BiostimeDataCapture.DataService.FaJieyueDocRepository.FindById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.DataService\FaJieyueDocRepository.cs:行号 16
+   在 BiostimeDataCapture.AppService.FaDocService.GetJieyueById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\FaDocService.cs:行号 48
+   在 BiostimeDataCapture.Controllers.FaArchiveController.SaveJieyueInfo(Jieyue jieyueInfo) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaArchiveController.cs:行号 272,执行人:2
+2016-12-26 13:15:32.6309 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:15:48.1908 ERROR FaArchive/SaveFaLendDoc出现异常,ex.Message=序列不包含任何元素,ex.StackTrace=   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 BiostimeDataCapture.DataService.FaJieyueDocRepository.FindById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.DataService\FaJieyueDocRepository.cs:行号 16
+   在 BiostimeDataCapture.AppService.FaDocService.GetJieyueById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\FaDocService.cs:行号 48
+   在 BiostimeDataCapture.Controllers.FaArchiveController.SaveJieyueInfo(Jieyue jieyueInfo) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaArchiveController.cs:行号 272,执行人:2
+2016-12-26 13:15:52.8295 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:15:54.4526 ERROR FaArchive/SaveFaLendDoc出现异常,ex.Message=序列不包含任何元素,ex.StackTrace=   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 BiostimeDataCapture.DataService.FaJieyueDocRepository.FindById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.DataService\FaJieyueDocRepository.cs:行号 16
+   在 BiostimeDataCapture.AppService.FaDocService.GetJieyueById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\FaDocService.cs:行号 48
+   在 BiostimeDataCapture.Controllers.FaArchiveController.SaveJieyueInfo(Jieyue jieyueInfo) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaArchiveController.cs:行号 272,执行人:2
+2016-12-26 13:16:24.8230 INFO 用户2进入FaArchive/Index
+2016-12-26 13:16:40.9088 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:17:27.7130 ERROR FaArchive/SaveFaLendDoc出现异常,ex.Message=序列不包含任何元素,ex.StackTrace=   在 System.Data.Linq.SqlClient.SqlProvider.Execute(Expression query, QueryInfo queryInfo, IObjectReaderFactory factory, Object[] parentArgs, Object[] userArgs, ICompiledSubQuery[] subQueries, Object lastResult)
+   在 System.Data.Linq.SqlClient.SqlProvider.ExecuteAll(Expression query, QueryInfo[] queryInfos, IObjectReaderFactory factory, Object[] userArguments, ICompiledSubQuery[] subQueries)
+   在 System.Data.Linq.SqlClient.SqlProvider.System.Data.Linq.Provider.IProvider.Execute(Expression query)
+   在 System.Data.Linq.Table`1.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   在 System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 BiostimeDataCapture.DataService.FaJieyueDocRepository.FindById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.DataService\FaJieyueDocRepository.cs:行号 16
+   在 BiostimeDataCapture.AppService.FaDocService.GetJieyueById(Int64 id) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\FaDocService.cs:行号 48
+   在 BiostimeDataCapture.Controllers.FaArchiveController.SaveJieyueInfo(Jieyue jieyueInfo) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaArchiveController.cs:行号 272,执行人:2
+2016-12-26 13:18:22.7463 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:18:27.8845 INFO FaLendDoc数据保存成功，编号:1,操作人:2,时间:2016/12/26 13:18:27。
+2016-12-26 13:18:28.8715 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:18:45.2319 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:18:49.9264 INFO FaLendDoc数据保存成功，编号:1,操作人:2,时间:2016/12/26 13:18:49。
+2016-12-26 13:18:50.8892 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:40:03.1814 INFO 用户2进入FaArchive/Index
+2016-12-26 13:41:03.8234 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:41:08.4288 INFO FaLendDoc数据保存成功，编号:1,操作人:2,时间:2016/12/26 13:41:08。
+2016-12-26 13:41:09.5906 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:41:11.7978 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:41:15.7179 INFO FaLendDoc数据保存成功，编号:1,操作人:2,时间:2016/12/26 13:41:15。
+2016-12-26 13:41:16.6407 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:41:21.7818 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:41:26.1208 INFO FaLendDoc数据保存成功，编号:1,操作人:2,时间:2016/12/26 13:41:26。
+2016-12-26 13:41:27.0414 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:41:32.4165 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:42:00.4528 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:42:01.5839 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:42:03.3530 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:42:04.9661 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:42:08.3613 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:43:13.2922 INFO 用户2进入FaArchive/Index
+2016-12-26 13:43:45.4227 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:52:06.7729 INFO 用户2进入FaArchive/FaLendDocMgmt
+2016-12-26 13:53:02.5924 INFO 用户2进入FaArchive/Index
+2016-12-26 13:53:14.7266 INFO 用户2进入FaArchive/Index
+2016-12-26 13:53:21.0971 INFO 用户2进入FaArchive/Index
+2016-12-26 22:08:49.0000 INFO 用户2进入FaArchive/Index
+2016-12-26 22:09:06.9488 INFO 用户2进入FaArchive/Index
+2016-12-26 22:11:47.7319 INFO 用户2进入FaArchive/Index
+2016-12-26 22:12:21.1080 INFO 用户2进入FaArchive/Index
+2016-12-26 22:12:33.6526 INFO 用户2进入FaArchive/Index
+2016-12-26 22:12:41.5700 INFO 用户2进入FaArchive/Index
+2016-12-26 22:13:44.5854 INFO 用户2进入FaArchive/Index
+2016-12-26 22:14:25.9234 INFO 用户2进入FaArchive/Index
+2016-12-26 22:17:40.1349 INFO 用户2进入FaArchive/Index
+2016-12-26 22:19:58.8544 INFO 用户2进入FaArchive/Index
+2016-12-26 22:23:23.5724 INFO 用户2进入FaArchive/Index
+2016-12-26 22:25:05.2844 INFO 用户2进入FaArchive/Index
+2016-12-26 22:25:34.3527 INFO 用户2进入FaArchive/Index
+2016-12-26 22:30:30.9371 INFO 用户2进入FaArchive/Index
+2016-12-26 22:31:22.8541 INFO 用户2进入FaArchive/Index
+2016-12-26 22:45:45.5213 INFO 用户2进入FaArchive/Index
+2016-12-26 22:52:25.3383 INFO 用户2进入FaArchive/Index
+2016-12-26 22:53:21.0919 INFO 用户2进入FaArchive/FaDocMgmt
+2016-12-26 22:53:22.6954 INFO 用户2进入FaArchive/Index
+2016-12-26 22:59:44.1148 INFO 用户2进入FaArchive/Index

@@ -1,0 +1,9 @@
+1.按顺序执行02database中的脚本，新建号数据库相关表、触发器，导入所有柜号清单
+
+2.将BiostimeDataCapture部署到Edoc2站点中(添加应用程序)，在web.config中处理好相关配置
+
+3.将BiostimeProcess部署到Edoc2站点中(添加虚拟目录),在web.config中处理好相关配置
+
+4.将03wf中的流程导入Edoc2中，调整好流程审批人
+
+5.重启Edoc2服务和IIs

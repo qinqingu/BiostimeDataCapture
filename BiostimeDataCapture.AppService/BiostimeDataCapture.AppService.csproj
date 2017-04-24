@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,10 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FaArchiveLendService.cs" />
+    <Compile Include="FaDocExcelService.cs" />
+    <Compile Include="EpPlusExcelHelper.cs" />
     <Compile Include="FaDocService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BiostimeDataCapture.Common\BiostimeDataCapture.Common.csproj">
+      <Project>{5dbe3086-f5d5-44ef-945b-880e910675d0}</Project>
+      <Name>BiostimeDataCapture.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BiostimeDataCapture.DataService\BiostimeDataCapture.DataService.csproj">
       <Project>{9e206991-4b4d-4e94-9fcb-484793457397}</Project>
       <Name>BiostimeDataCapture.DataService</Name>

@@ -1,0 +1,32 @@
+2016-12-28 09:07:00.3365 INFO 用户2进入FaArchive/Index
+2016-12-28 09:38:09.6141 INFO 用户2进入FaArchive/Index
+2016-12-28 09:38:12.8082 INFO 用户2进入FaArchive/Index
+2016-12-28 09:38:28.0434 INFO 用户2进入FaArchive/Index
+2016-12-28 11:04:26.1244 INFO 用户2进入FaArchive/Index
+2016-12-28 11:05:39.7346 INFO 用户2进入FaArchive/FaDocMgmt
+2016-12-28 11:05:49.1972 INFO FdDoc数据保存成功，编号:3,操作人:2,时间:2016/12/28 11:05:49。
+2016-12-28 11:05:50.4022 INFO 用户2进入FaArchive/FaDocMgmt
+2016-12-28 11:05:51.2922 INFO 用户2进入FaArchive/Index
+2016-12-28 13:19:59.1129 INFO 用户2进入FaArchive/Index
+2016-12-28 13:20:02.5790 INFO 用户2进入FaArchive/Index
+2016-12-28 13:25:27.0620 INFO 用户2进入FaArchive/Index
+2016-12-28 14:10:21.6603 INFO 用户2进入FaArchive/Index
+2016-12-28 14:14:41.6919 INFO 用户2进入FaArchive/Index
+2016-12-28 16:07:11.0515 INFO 用户2进入FaArchive/Index
+2016-12-28 16:08:07.8276 INFO 用户2进入FaArchive/ExportToExcel,执行行政部文件信息导出操作.
+2016-12-28 16:08:08.2206 ERROR FaArchive/ExportToExcel出现异常,ex.Message=给定关键字不在字典中。,ex.StackTrace=   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 OfficeOpenXml.ExcelWorksheets.get_Item(Int32 PositionID)
+   在 BiostimeDataCapture.AppService.FaDocExcelService.GetFaDocsExcel(IList`1 list) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\FaDocExcelService.cs:行号 20
+   在 BiostimeDataCapture.Controllers.FaArchiveController.ExportToExcel(String query) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaArchiveController.cs:行号 424,执行人:2
+2016-12-28 16:08:15.5187 INFO 用户2进入FaArchive/ExportToExcel,执行行政部文件信息导出操作.
+2016-12-28 16:08:15.6387 ERROR FaArchive/ExportToExcel出现异常,ex.Message=给定关键字不在字典中。,ex.StackTrace=   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 OfficeOpenXml.ExcelWorksheets.get_Item(Int32 PositionID)
+   在 BiostimeDataCapture.AppService.FaDocExcelService.GetFaDocsExcel(IList`1 list) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture.AppService\FaDocExcelService.cs:行号 20
+   在 BiostimeDataCapture.Controllers.FaArchiveController.ExportToExcel(String query) 位置 e:\项目开发\BiostimeDataCapture\BiostimeDataCapture\Controllers\FaArchiveController.cs:行号 424,执行人:2
+2016-12-28 16:11:36.7913 INFO 用户2进入FaArchive/Index
+2016-12-28 16:14:54.0192 INFO 用户2进入FaArchive/Index
+2016-12-28 16:15:04.3017 INFO 用户2进入FaArchive/ExportToExcel,执行行政部文件信息导出操作.
+2016-12-28 16:17:15.2694 INFO 用户2进入FaArchive/Index
+2016-12-28 16:17:33.5944 INFO 用户2进入FaArchive/Index
+2016-12-28 16:17:55.2777 INFO 用户2进入FaArchive/Index
+2016-12-28 17:29:41.1265 INFO 用户2进入FaArchive/Index

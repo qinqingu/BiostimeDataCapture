@@ -13,7 +13,7 @@ namespace BiostimeDataCapture.Controllers
         [HttpGet]
         public string GetUserRealName()
         {
-            if (!IsValidAccount())
+            if (SessionUserId == 0)
             {
                 return PesponseResult("未知帐号");
             }

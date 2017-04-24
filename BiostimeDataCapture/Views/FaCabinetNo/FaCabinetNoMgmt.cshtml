@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "柜号管理";
+    Layout = "../Shared/Navigation.cshtml";
+}
+@Scripts.Render("~/bundles/facabinetNomgmtjs")
+
+<div id="cabinetMgmtErrorContainer" class="error" ></div>
+<div class="headings">
+    柜号信息
+</div>
+<div class="content_box box_content">
+    <table style="width: 100%;">
+        <tr class="border_b_1_da">
+            <td>
+                状态:
+            </td>
+            <td>
+                <input type="hidden" id="cabinetNoState" name="cabinetNoState" value="@ViewData["enable"]"/>
+                <select  id="cabinetNoStates" style="width: 192px;" disabled="disabled">
+                    <option selected="selected" value="true">启用</option>
+                    <option value="false">禁用</option>
+                </select>
+            </td>
+            <td style="width: 80px;">
+                柜号名称:
+            </td>
+            <td style="width: 280px;">
+                <input type="hidden" id="Id" name="Id" value="@ViewData["Id"]"/>
+                <input type="text" id="cabinetNo" name="cabinetNo" value="@ViewData["cabinetNo"]" class="text_input" maxlength="100" />
+            </td>
+            <td style="width: 80px;">
+                存储位置:
+            </td>
+            <td>
+                <input type="text"  id="path" name="path" value="@ViewData["path"]" class="text_input" />
+            </td>
+        </tr>
+    </table>
+    <div class="margin-t10">
+        <div class="left" style="width: 400px;">&nbsp;&nbsp;</div>
+        <div>
+            <a id="saveButton" class="button01">
+                <span class="l"></span>
+                <span class="m">保存</span>
+                <span class="r"></span>
+            </a>
+            <a id="saveAndContinueButton" class="button01">
+                <span class="l"></span>
+                <span class="m">保存并继续</span>
+                <span class="r"></span>
+            </a>
+            <a id="returnButton" class="button01" href="FaCabinetNoList">
+                <span class="l"></span>
+                <span class="m">返回</span>
+                <span class="r"></span>
+            </a>
+        </div>
+    </div>
+</div>

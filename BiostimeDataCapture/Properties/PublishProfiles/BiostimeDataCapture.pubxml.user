@@ -1,0 +1,854 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Debug</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AppFrontend/bower_components/bootstrap/bootstrap.min.js">
+      <publishTime>04/16/2017 17:02:27</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-fileupload/jquery.fileupload.js">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-fileupload/jquery.iframe-transport.js">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/jquery.jqgrid/grid.locale-cn.js">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/jquery.jqgrid/jquery.jqgrid.js">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/jquery.jqgrid/ui.jqgrid.css">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/box.bg.normal.jpg">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-bg_flat_55_fbec88_40x100.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>04/16/2017 16:28:14</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>04/16/2017 16:27:18</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-bg_glass_75_d0e5f5_1x400.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>04/16/2017 16:26:35</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>04/16/2017 16:28:14</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-bg_glass_85_dfeffc_1x400.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>04/16/2017 16:27:18</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-bg_inset-hard_100_f5f8f9_1x100.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-bg_inset-hard_100_fcfdfd_1x100.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-icons_217bc0_256x240.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-icons_222222_256x240.png">
+      <publishTime>04/16/2017 16:27:18</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-icons_454545_256x240.png">
+      <publishTime>04/16/2017 16:27:18</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-icons_469bdd_256x240.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-icons_6da8d5_256x240.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-icons_888888_256x240.png">
+      <publishTime>04/16/2017 16:28:14</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-icons_d8e7f3_256x240.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/images/ui-icons_f9bd01_256x240.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/jquery-ui-1.8.23.custom.css">
+      <publishTime>04/16/2017 16:21:43</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/jquery-ui-1.9.2.custom.css">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/jquery-ui.custom.css">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery-ui/redmond/jquery-ui.custom.js">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery/jquery-1.8.0.min.js">
+      <publishTime>10/21/2013 11:11:54</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery/jquery-ui-1.8.23.custom.min.js">
+      <publishTime>10/21/2013 11:11:54</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery/jquery.custom.js">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery/jquery.js">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery/jquery.numeric.js">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery/jquery.validate.custom.js">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/jquery/jquery.validate.js">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/bower_components/webui/webui.js">
+      <publishTime>04/16/2017 18:57:17</publishTime>
+    </File>
+    <File Include="AppFrontend/css/css.css">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/css/webui.css.css">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/images/addnew.png">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/images/asc.gif">
+      <publishTime>12/06/2016 17:31:24</publishTime>
+    </File>
+    <File Include="AppFrontend/images/bg.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/bg_fade_med.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/bg_heading.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/bg_x.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/blank.gif">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/body.bg.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/box.bg.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/box.bg.normal.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/box.li.line.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/btn.l.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/btn.r.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/btnGray.l.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/btnGray.lon.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/btnGray.m.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/btnGray.mon.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/btnGray.r.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/btnGray.ron.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/button01.l.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/button01.lon.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/button01.m.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/button01.mon.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/button01.r.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/button01.ron.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/button02.l.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/button02.lon.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/button02.m.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/button02.mon.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/button02.r.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/button02.ron.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/ChartImg.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/ChartImg1.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/column_bg.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/conbg.down150.cb.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/conbg.down150.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/conbg.down50.cb.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/conbg.down50.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/conbg.up150.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/cross_circle.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/Delete.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/desc.gif">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/down.gif">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/down.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/exclamation.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/flip.bg.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/footer.l.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/footer.r.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/icon.help.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/icon.name.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/icon.password.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/ico_action_plan.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/ico_dashboard.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/ico_logout.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/ico_my_account.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/ico_others.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/index.bg.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/information.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/iVASLogo.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/last.gif">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/leftmenu.b.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/leftmenu.t.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/li.title.highlight.l.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/li.title.highlight.m.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/li.title.highlight.r.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/li.title.normal.l.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/li.title.normal.m.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/li.title.normal.r.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/login.b.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/login.body.bg.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/login.dy.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/login.m.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/login.t.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/logo.png">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/loss_title_bg.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/main.b.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/main.m.jpg">
+      <publishTime>12/06/2016 17:31:25</publishTime>
+    </File>
+    <File Include="AppFrontend/images/main.t.5.s1.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/movedown.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/moveup.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/move_child.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/move_parent.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/nav.bg.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/nav.l.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/nav.m.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/nav.r.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/next.gif">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/pre.gif">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/quick_menu.bg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/quick_menu.bg.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/quick_menu_arrow.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/quick_menu_bg.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/refresh.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/search.box.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/search.go.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/star.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/step_l.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/step_l_on.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/step_m.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/step_r.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/step_r_on.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/subnav.l.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/subnav.m.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/subnav.r.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/tabs.co.bg.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/tabs.co.on.bg.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/terago.logo.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/text_input.bg.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/tick_circle.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/title_bg.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/toggleDown.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/toggleUp.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/top.arrow.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/top.bg.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/top.bg.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/top.gif">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/top.hover.bg.jpg">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/up.gif">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/up.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/wait.gif">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/warning.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/images/wrap_bg.png">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/anna-popup-box/confirmation.js">
+      <publishTime>04/16/2017 15:22:35</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/anna-popup-box/prompt.js">
+      <publishTime>04/16/2017 15:23:08</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/anna/anna.ajax.js">
+      <publishTime>04/16/2017 15:39:25</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/anna/anna.grid.js">
+      <publishTime>04/16/2017 15:40:02</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/anna/anna.js">
+      <publishTime>04/16/2017 15:20:41</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/anna/anna.masterpage.js">
+      <publishTime>04/16/2017 15:22:00</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/anna/anna.validator.js">
+      <publishTime>04/16/2017 15:22:04</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchive/fa.archive.list.js">
+      <publishTime>04/17/2017 20:43:32</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchive/fa.bg.mgmt.js">
+      <publishTime>04/16/2017 15:24:32</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchive/fa.cabinetNo.list.js">
+      <publishTime>02/10/2017 10:22:33</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchive/fa.doc.list.js">
+      <publishTime>12/26/2016 22:46:47</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchive/fa.doc.mgmt.js">
+      <publishTime>12/09/2016 21:47:31</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchive/fa.eg.mgmt.js">
+      <publishTime>04/16/2017 15:25:06</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchive/fa.hg.mgmt.js">
+      <publishTime>04/16/2017 15:25:33</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchive/fa.layout.js">
+      <publishTime>02/22/2017 23:05:15</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchive/fa.lenddoc.list.js">
+      <publishTime>12/26/2016 23:04:13</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchive/fa.lenddoc.mgmt.js">
+      <publishTime>12/27/2016 21:30:31</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchive/fa.returndoc.list.js">
+      <publishTime>12/26/2016 23:05:29</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchive/fa.returnDoc.mgmt.js">
+      <publishTime>12/28/2016 09:06:40</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchiveLend/fa.lenddoc.list.js">
+      <publishTime>04/17/2017 20:43:25</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchiveLend/fa.lenddoc.mgmt.js">
+      <publishTime>04/16/2017 15:26:55</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchiveReturn/fa.returndoc.list.js">
+      <publishTime>04/17/2017 20:44:40</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faArchiveReturn/fa.returnDoc.mgmt.js">
+      <publishTime>04/16/2017 15:28:05</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faCabinetNo/fa.cabinetNo.list.js">
+      <publishTime>04/16/2017 15:28:17</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faCabinetNo/fa.cabinetNo.mgmt.js">
+      <publishTime>04/16/2017 15:28:28</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faCompany/fa.company.list.js">
+      <publishTime>04/16/2017 15:28:39</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faCompany/fa.company.mgmt.js">
+      <publishTime>04/16/2017 15:28:49</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faReportName/fa.reportName.list.js">
+      <publishTime>04/16/2017 15:28:59</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/faReportName/fa.reportName.mgmt.js">
+      <publishTime>04/16/2017 15:29:10</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/webui-popup-box/confirmation.js">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/webui-popup-box/prompt.js">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/webui/webui.ajax.js">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/webui/webui.grid.js">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/webui/webui.js">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/webui/webui.masterpage.js">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="AppFrontend/Js/webui/webui.validator.js">
+      <publishTime>12/06/2016 17:31:26</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>12/06/2016 22:16:48</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>12/06/2016 22:16:48</publishTime>
+    </File>
+    <File Include="bin/BiostimeDataCapture.AppService.dll">
+      <publishTime>04/18/2017 16:03:43</publishTime>
+    </File>
+    <File Include="bin/BiostimeDataCapture.AppService.pdb">
+      <publishTime>04/18/2017 16:03:43</publishTime>
+    </File>
+    <File Include="bin/BiostimeDataCapture.Common.dll">
+      <publishTime>04/18/2017 16:03:42</publishTime>
+    </File>
+    <File Include="bin/BiostimeDataCapture.Common.pdb">
+      <publishTime>04/18/2017 16:03:42</publishTime>
+    </File>
+    <File Include="bin/BiostimeDataCapture.DataService.dll">
+      <publishTime>04/18/2017 16:03:43</publishTime>
+    </File>
+    <File Include="bin/BiostimeDataCapture.DataService.pdb">
+      <publishTime>04/18/2017 16:03:43</publishTime>
+    </File>
+    <File Include="bin/BiostimeDataCapture.dll">
+      <publishTime>04/18/2017 16:03:45</publishTime>
+    </File>
+    <File Include="bin/BiostimeDataCapture.Domain.dll">
+      <publishTime>04/18/2017 16:03:41</publishTime>
+    </File>
+    <File Include="bin/BiostimeDataCapture.Domain.pdb">
+      <publishTime>04/18/2017 16:03:40</publishTime>
+    </File>
+    <File Include="bin/BiostimeDataCapture.Dto.dll">
+      <publishTime>04/18/2017 16:03:40</publishTime>
+    </File>
+    <File Include="bin/BiostimeDataCapture.Dto.pdb">
+      <publishTime>04/18/2017 16:03:40</publishTime>
+    </File>
+    <File Include="bin/BiostimeDataCapture.pdb">
+      <publishTime>04/18/2017 16:03:45</publishTime>
+    </File>
+    <File Include="bin/EDoc2.ApiClient.dll">
+      <publishTime>09/19/2014 16:31:48</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>12/06/2016 15:59:12</publishTime>
+    </File>
+    <File Include="bin/EPPlus.dll">
+      <publishTime>05/23/2013 09:24:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>12/06/2016 15:59:14</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>12/06/2016 22:16:49</publishTime>
+    </File>
+    <File Include="bin/NLog.config">
+      <publishTime>12/09/2016 14:50:29</publishTime>
+    </File>
+    <File Include="bin/NLog.dll">
+      <publishTime>12/09/2016 14:49:27</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>12/06/2016 17:23:24</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>12/06/2016 17:23:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>12/06/2016 17:23:23</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>12/06/2016 17:30:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>12/06/2016 15:59:15</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>12/06/2016 17:23:23</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>12/06/2016 17:23:23</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>12/06/2016 17:23:23</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>12/06/2016 17:23:23</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>12/06/2016 22:16:49</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/EntityFramework.resources.dll">
+      <publishTime>12/06/2016 15:59:20</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.resources.dll">
+      <publishTime>12/06/2016 17:23:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.WebRequest.resources.dll">
+      <publishTime>12/06/2016 17:23:28</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
+      <publishTime>12/06/2016 17:23:26</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Providers.resources.dll">
+      <publishTime>12/06/2016 15:59:20</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
+      <publishTime>12/06/2016 17:23:26</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>12/06/2016 17:23:26</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>12/06/2016 17:23:26</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.resources.dll">
+      <publishTime>12/06/2016 17:23:26</publishTime>
+    </File>
+    <File Include="Default.htm">
+      <publishTime>12/07/2016 17:57:45</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/06/2016 17:30:17</publishTime>
+    </File>
+    <File Include="NLog.config">
+      <publishTime>12/09/2016 14:50:29</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>12/09/2016 14:49:37</publishTime>
+    </File>
+    <File Include="Views/Error/Index.cshtml">
+      <publishTime>12/09/2016 14:45:50</publishTime>
+    </File>
+    <File Include="Views/Error/LoginError.cshtml">
+      <publishTime>03/16/2017 15:11:04</publishTime>
+    </File>
+    <File Include="Views/FaArchive/FaArchiveList.cshtml">
+      <publishTime>04/17/2017 20:59:05</publishTime>
+    </File>
+    <File Include="Views/FaArchive/FaBgMgmt.cshtml">
+      <publishTime>02/17/2017 12:55:34</publishTime>
+    </File>
+    <File Include="Views/FaArchive/FaCabinetNoList.cshtml">
+      <publishTime>02/10/2017 14:29:24</publishTime>
+    </File>
+    <File Include="Views/FaArchive/FaDocList.cshtml">
+      <publishTime>12/28/2016 13:25:08</publishTime>
+    </File>
+    <File Include="Views/FaArchive/FaDocMgmt.cshtml">
+      <publishTime>12/09/2016 21:12:05</publishTime>
+    </File>
+    <File Include="Views/FaArchive/FaEgMgmt.cshtml">
+      <publishTime>02/17/2017 12:55:25</publishTime>
+    </File>
+    <File Include="Views/FaArchive/FaHgMgmt.cshtml">
+      <publishTime>02/17/2017 12:55:46</publishTime>
+    </File>
+    <File Include="Views/FaArchive/FaLendDocList.cshtml">
+      <publishTime>12/26/2016 23:01:17</publishTime>
+    </File>
+    <File Include="Views/FaArchive/FaLendDocMgmt.cshtml">
+      <publishTime>12/26/2016 13:18:19</publishTime>
+    </File>
+    <File Include="Views/FaArchive/FaReturnDocList.cshtml">
+      <publishTime>12/26/2016 23:06:34</publishTime>
+    </File>
+    <File Include="Views/FaArchive/FaReturnDocMgmt.cshtml">
+      <publishTime>12/26/2016 13:18:11</publishTime>
+    </File>
+    <File Include="Views/FaArchive/_faArchiveLayout.cshtml">
+      <publishTime>12/28/2016 13:21:00</publishTime>
+    </File>
+    <File Include="Views/FaArchiveLend/FaLendDocList.cshtml">
+      <publishTime>04/17/2017 20:39:20</publishTime>
+    </File>
+    <File Include="Views/FaArchiveLend/FaLendDocMgmt.cshtml">
+      <publishTime>02/15/2017 19:58:59</publishTime>
+    </File>
+    <File Include="Views/FaArchiveReturn/FaReturnDocList.cshtml">
+      <publishTime>04/17/2017 20:38:49</publishTime>
+    </File>
+    <File Include="Views/FaArchiveReturn/FaReturnDocMgmt.cshtml">
+      <publishTime>02/10/2017 14:09:31</publishTime>
+    </File>
+    <File Include="Views/FaCabinetNo/FaCabinetNoList.cshtml">
+      <publishTime>02/22/2017 22:29:27</publishTime>
+    </File>
+    <File Include="Views/FaCabinetNo/FaCabinetNoMgmt.cshtml">
+      <publishTime>02/23/2017 15:06:34</publishTime>
+    </File>
+    <File Include="Views/FaCompany/FaCompanyList.cshtml">
+      <publishTime>04/16/2017 20:42:00</publishTime>
+    </File>
+    <File Include="Views/FaCompany/FaCompanyMgmt.cshtml">
+      <publishTime>04/17/2017 21:07:56</publishTime>
+    </File>
+    <File Include="Views/FaReportName/FaReportNameList.cshtml">
+      <publishTime>02/23/2017 15:35:57</publishTime>
+    </File>
+    <File Include="Views/FaReportName/FaReportNameMgmt.cshtml">
+      <publishTime>02/23/2017 15:34:10</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>12/06/2016 21:29:55</publishTime>
+    </File>
+    <File Include="Views/Shared/Navigation.cshtml">
+      <publishTime>02/22/2017 23:03:23</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>04/16/2017 19:28:11</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>12/06/2016 17:30:17</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>12/06/2016 17:30:17</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/18/2017 16:24:09</publishTime>
+    </File>
+    <File Include="_Templates/BgFaDocTemplate.xlsx">
+      <publishTime>03/08/2017 11:01:47</publishTime>
+    </File>
+    <File Include="_Templates/EgFaDocTemplate.xlsx">
+      <publishTime>03/08/2017 11:01:59</publishTime>
+    </File>
+    <File Include="_Templates/FaDocTemplate.xlsx">
+      <publishTime>12/28/2016 16:16:56</publishTime>
+    </File>
+    <File Include="_Templates/HgFaDocTemplate.xlsx">
+      <publishTime>03/08/2017 11:02:11</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -10,7 +10,7 @@ namespace BiostimeDataCapture.Common
         /// <summary>
         ///     BiostimeDataCapture数据库链接配置
         /// </summary>
-        public static string BiostimeDataCaptureConnection = ConfigurationManager.AppSettings["BiostimeDataCaptureConnection"];
+        public static string BiostimeDataCaptureConnection = ConfigurationManager.AppSettings["BiostimeDataCaptureConnection"]; 
 
         /// <summary>
         ///     是否属于调式环境
@@ -43,5 +43,15 @@ namespace BiostimeDataCapture.Common
         {
             get { return ConfigurationManager.AppSettings["EDoc2BaseUrl"].ToString(CultureInfo.InvariantCulture); }
         }
+
+        /// <summary>
+        ///    财务档案管理员用户组
+        /// </summary>
+        public static int CaiwuDanganGuanliyuan = int.Parse(ConfigurationManager.AppSettings["CaiwuDanganGuanliyuan"]);
+
+        /// <summary>
+        ///     Edoc2管理员帐号ID
+        /// </summary>
+        public static int Edoc2AdminUserId = 2;
     }
 }
